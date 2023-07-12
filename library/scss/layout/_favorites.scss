@@ -1,0 +1,37 @@
+.favorites {
+    width: 100%;
+    .wrapper {
+
+        .section_title {
+            color: #0C0C0E;
+            font-family: Forum;
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 40px;
+            letter-spacing: 2px;
+            text-transform: capitalize;
+
+            text-align: center;
+            margin: 20px 0 0 0;
+        }
+        .section_title::after{
+            content: "";
+            background-color: #0C0C0E;
+            width: 50px;
+            height: 1px;
+            display: block;
+            margin: 20px auto 40px;
+
+        }
+        .favorites_pick {
+            color: #000;
+            font-family: Inter;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+        
+    }
+}

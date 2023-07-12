@@ -3,44 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./scss/style.css">
     <title>Brooklyn Public Library</title>
 </head>
 <body>
     <header class="header">
-        <div class="wrapper">
+        <div class="wrapper_header wrapper">
             <a href="#" target="_blank"><h1 class="nameLib">Brooklyn Public Library</h1></a>
-            <nav class="navigation">
-                <ul class="nav_list">
-                    <li class="list_section"><a href="#">About</a></li>
-                    <li class="list_section"><a href="#">Favorites</a></li>
-                    <li class="list_section"><a href="#">Coffee shop</a></li>
-                    <li class="list_section"><a href="#">Contacts</a></li>
-                    <li class="list_section"><a href="#">Library Card</a></li>
-                </ul>
-            </nav>
-            <a href="#" class="your_prof"><img src="./assets/svg/icon_profile.svg" alt="icon_prof" class="icon_prof"></a>
+            <div class="container">
+                <nav class="navigation">
+                        <li class="list_section"><a class="name_listSection" href="#">About</a></li>
+                        <li class="list_section"><a class="name_listSection" href="#">Favorites</a></li>
+                        <li class="list_section"><a class="name_listSection" href="#">Coffee shop</a></li>
+                        <li class="list_section"><a class="name_listSection" href="#">Contacts</a></li>
+                        <li class="list_section"><a class="name_listSection" href="#">Library Card</a></li>
+                    </ul>
+                </nav>
+                <a href="#" class="your_prof"><img src="./assets/svg/icon_profile.svg" alt="icon_prof" class="icon_prof"></a>
+            </div>
         </div>
     </header>
     <main class="main">
         <section class="welcom">
             <div class="welcomBlock_bg">
-                <h2 class="welcom_text">Welcome to the Brooklyn Library</h2>
+                <h2 class="welcom_text">Welcome</h2>
+                <h2 class="welcom_text">to the Brooklyn</h2>
+                <h2 class="welcom_text">Library</h2>
             </div>
             <img src="./assets/png/Welcome.png" alt="welcom" class="welcom_bg">
         </section>
         <section class="about">
             <div class="wrapper">
-                <h2 class="about_title">About</h2>
-                <p class="about_text">The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop inside </p>
+                <div class="aboutTitle_block">
+                    <h2 class="about_title">About</h2>
+                    <p class="about_text">The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop inside </p>
+                </div>
                 <div class="about_carusel">
-                    <img src="./assets/jpeg/about_image 1.jpg" alt="about_img1" class="about_img1">
-                    <img src="./assets/jpeg/about_image 2.jpg" alt="about_img2" class="about_img1">
-                    <img src="./assets/jpeg/about_image 3.jpg" alt="about_img3" class="about_img1">
+                    <img src="./assets/jpeg/about_image1.jpg" alt="about_img1" class="about_img1">
+                    <img src="./assets/jpeg/about_image2.jpg" alt="about_img2" class="about_img1">
+                    <img src="./assets/jpeg/about_image3.jpg" alt="about_img3" class="about_img1">
                 </div>
                 <div class="carusel_pagination">
-                    <div class="pagination1"></div>
-                    <div class="pagination2"></div>
-                    <div class="pagination3"></div>
+                    <button class="pagination"></button>
+                    <button class="pagination"></button>
+                    <button class="pagination"></button>
                 </div>
             </div>
         </section>
@@ -48,12 +54,9 @@
             <div class="wrapper">
                 <h2 class="section_title">Favorites</h2>
                 <p class="favorites_pick">Pick favorites of season<p/>
-                <div class="fav_inteac_btn">
-                    <input type="radio" id="winter"><label for="winter">Winter</label>
-                    <input type="radio" id="spring"><label for="spring">Spring</label>
-                    <input type="radio" id="summer"><label for="summer">Summer</label>
-                    <input type="radio" id="autumn"><label for="autumn">Autumn</label>
-                </div>
+                    <form action="#">
+                        
+                    </form>
                 <div class="grid">
                     <div class="first_book">
                         <div class="bg-description">
