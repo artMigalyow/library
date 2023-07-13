@@ -88,6 +88,7 @@
             gap: 40px 260px;
             .present_book {
                 max-width: 550px;
+                height: 555px;
                 width: 100%;
                 border: 1px solid #000;
                 background: #FFF;
@@ -180,7 +181,7 @@
                 .own_book {
                     position: absolute;
                     bottom: 15px;
-                    
+
                     width: 75px;
                     height: 30px;
                     border-radius: 2px;
@@ -198,6 +199,9 @@
                 }
 
 
+            }
+            #book5,#book6,#book7,#book8,#book9,#book10,#book11,#book12 {
+                display: none;
             }
         }
     }

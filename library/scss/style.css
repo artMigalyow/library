@@ -587,6 +587,7 @@ body * {
 }
 .favorites .wrapper .grid .present_book {
   max-width: 550px;
+  height: 555px;
   width: 100%;
   border: 1px solid #000;
   background: #FFF;
@@ -689,4 +690,7 @@ body * {
   font-weight: 700;
   line-height: normal;
   letter-spacing: 1px;
+}
+.favorites .wrapper .grid #book5, .favorites .wrapper .grid #book6, .favorites .wrapper .grid #book7, .favorites .wrapper .grid #book8, .favorites .wrapper .grid #book9, .favorites .wrapper .grid #book10, .favorites .wrapper .grid #book11, .favorites .wrapper .grid #book12 {
+  display: none;
 }/*# sourceMappingURL=style.css.map */
