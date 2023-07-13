@@ -32,6 +32,173 @@
             font-weight: 700;
             line-height: normal;
         }
-        
+        .favForms {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            max-width: 700px;
+            width: 100%;
+            margin-bottom: 40px;
+            input[type="radio"] {
+                position: absolute;
+                opacity: 0;
+            }
+            label {
+                color: #000;
+                font-family: Inter;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                text-transform: capitalize;
+                cursor: pointer;
+            }
+            .fake_radiobtn {
+                display: inline-block;
+                width: 17px;
+                height: 17px;
+                border: 1px solid black;
+                border-radius: 50%;
+                position: relative;
+                margin-right: 20px;
+                cursor: pointer;
+            }
+            .fake_radiobtn::before {
+                content: "";
+                display: inline-block;
+                width: 7px;
+                height: 7px;
+                border-radius: 50%;
+                background: #0C0C0E;
+                position: absolute;
+                left: 50%;
+                top:50%;
+                transform: translate(-50%, -50%);
+                display: none;
+
+            }
+            .real_radiobtn:checked + .fake_radiobtn::before {
+                display: inline-block;
+            }
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: 550px 550px;
+            grid-template-rows: 555px 555px;
+            gap: 40px 260px;
+            .present_book {
+                max-width: 550px;
+                width: 100%;
+                border: 1px solid #000;
+                background: #FFF;
+                padding-left: 20px;
+                position: relative;
+
+                .bg-description {
+                    margin-bottom: 15px;
+                    .staff_picks {
+                        color: #000;
+                        font-family: Forum;
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 40px; /* 200% */
+                        letter-spacing: 2px;
+                        text-transform: capitalize;
+                        margin: 15px 0 0 0;
+                    }
+                    .staff_picks::after{
+                        content: '';
+                        width: 60px;
+                        height: 1px;
+                        display: block;
+                        background: #BB945F;
+                        margin-bottom: 20px;
+                    }
+                    .book_title {
+                        color: #000;
+                        font-family: Inter;
+                        font-size: 15px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 40px; /* 266.667% */
+                        letter-spacing: 2px;
+                        text-transform: uppercase;
+                        margin-top: 0;
+                    }
+                    .autor {
+                        color: #000;
+                        font-family: Inter;
+                        font-size: 15px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 40px;
+                        letter-spacing: 2px;
+                        text-transform: capitalize;
+                        margin: 0;
+                    }
+                    .description {
+                        margin: 0;
+                        color: #000;
+                        font-family: Inter;
+                        font-size: 15px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 40px; /* 266.667% */
+                        letter-spacing: 2px;
+                        text-transform: capitalize;
+                        margin-bottom: 15px;
+                        max-width: 355px;
+                    }
+                }
+                .buy_book {
+                    position: absolute;
+                    bottom: 15px;
+
+                    width: 75px;
+                    height: 30px;
+                    border-radius: 2px;
+                    border: 1px solid #0C0C0E;
+                    background:#FFF;
+
+                    color: #0C0C0E;
+                    text-align: center;
+                    font-family: Inter;
+                    font-size: 10px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                    letter-spacing: 1px;
+                }
+                .book {
+                    display: block;
+                    position: absolute;
+                    left: 390px;
+                    bottom: 0;
+
+                }
+                .own_book {
+                    position: absolute;
+                    bottom: 15px;
+                    
+                    width: 75px;
+                    height: 30px;
+                    border-radius: 2px;
+                    border: 1px solid #BB945F;
+                    background: #FFFFFF;
+
+                    color: #BB945F;
+                    text-align: center;
+                    font-family: Inter;
+                    font-size: 10px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                    letter-spacing: 1px;
+                }
+
+
+            }
+        }
     }
 }
