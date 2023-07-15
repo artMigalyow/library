@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./scss/style.css">
+    <link rel="shortcut icon" href="./assets/svg/favicon/favicon.ico" type="image/x-icon">
     <title>Brooklyn Public Library</title>
 </head>
 <body>
@@ -12,11 +13,11 @@
             <a href="#" target="_blank"><h1 class="nameLib">Brooklyn Public Library</h1></a>
             <div class="container">
                 <nav class="navigation">
-                        <li class="list_section"><a class="name_listSection" href="#">About</a></li>
-                        <li class="list_section"><a class="name_listSection" href="#">Favorites</a></li>
-                        <li class="list_section"><a class="name_listSection" href="#">Coffee shop</a></li>
-                        <li class="list_section"><a class="name_listSection" href="#">Contacts</a></li>
-                        <li class="list_section"><a class="name_listSection" href="#">Library Card</a></li>
+                        <li class="list_section"><a class="name_listSection" href="#about">About</a></li>
+                        <li class="list_section"><a class="name_listSection" href="#favorites">Favorites</a></li>
+                        <li class="list_section"><a class="name_listSection" href="#coffeShop">Coffee shop</a></li>
+                        <li class="list_section"><a class="name_listSection" href="#contacts">Contacts</a></li>
+                        <li class="list_section"><a class="name_listSection" href="#libraryCard">Library Card</a></li>
                     </ul>
                 </nav>
                 <a href="#" class="your_prof"><img src="./assets/svg/icon_profile.svg" alt="icon_prof" class="icon_prof"></a>
@@ -32,10 +33,10 @@
             </div>
             <img src="./assets/png/Welcome.png" alt="welcom" class="welcom_bg">
         </section>
-        <section class="about">
+        <section class="about" id="about">
             <div class="wrapper">
                 <div class="aboutTitle_block">
-                    <h2 class="about_title">About</h2>
+                    <h2 class="section_title">About</h2>
                     <p class="about_text">The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop inside </p>
                 </div>
                 <div class="about_carusel">
@@ -50,7 +51,7 @@
                 </div>
             </div>
         </section>
-        <section class="favorites">
+        <section class="favorites" id="favorites">
             <div class="wrapper">
                 <h2 class="section_title">Favorites</h2>
                 <p class="favorites_pick">Pick favorites of season<p/>
@@ -224,7 +225,7 @@
                 </div>
             </div>
         </section>
-        <section class="coffeShop">
+        <section class="coffeShop" id="coffeShop">
             <div class="wrapper">
                 <h2 class="section_title">Coffee shop</h2>
                 <p class="coffeShop_text">In our library, we have of cozy coffee shop, welcoming in customers with frothy cappuccinos and friendly conversation.
@@ -300,7 +301,7 @@
                 </div>
             </div>
         </section>
-        <section class="contacts">
+        <section class="contacts" id="contacts">
             <div class="wrapper">
                 <h2 class="section_title">Our Contacts</h2>
                 <div class="contact_inf">
@@ -318,7 +319,7 @@
                 </div>
             </div>
         </section>
-        <section class="libraryCard">
+        <section class="libraryCard" id="libraryCard">
             <div class="wrapper">
                 <h2 class="section_title">Digital Library Cards</h2>
                 <div class="container">
@@ -327,8 +328,8 @@
                         <div class="form">
                             <div class="form_body">
                                 <h4 class="name_form">Brooklyn Public Library</h4>
-                                <input type="text" placeholder="Reader's name ">
-                                <input type="number " placeholder="Card number">
+                                <input class="libraryCard_input" type="text" placeholder="Reader's name ">
+                                <input class="libraryCard_input" type="number " placeholder="Card number">
                             </div>
                             <button class="form_btn">Check the card</button>
                         </div>
@@ -347,23 +348,25 @@
     </main>
     <footer class="footer">
         <div class="wrapper">
-            <div class="adress">
-                286 Cadman Plaza, New York, NY 11238, United States
-            </div>
-            <ul class="social_list">
-                <li class="list_soc" ><a class="link_social" href="http://twitter.com" target="_blank" rel="noopener noreferrer"><img class="icon_social" src="./assets/svg/u_twitter-alt.svg" alt="u_twitter-alt"></a></li>
-                <li class="list_soc" ><a class="link_social" href="http://instagram.com" target="_blank" rel="noopener noreferrer"><img class="icon_social" src="./assets/svg/u_instagram.svg" alt="u_instagram"></a></li>
-                <li class="list_soc" ><a class="link_social" href="http://facebook.com" target="_blank" rel="noopener noreferrer"><img class="icon_social" src="./assets/svg/u_facebook-f.svg" alt="u_facebook-f"></a></li>
-            </ul>
-            <div class="schedule">
-                <a href="https://www.google.com/maps" target="_blank">Mon - Fri 08:00 am - 07:00 pm</a>
-                <a href="https://www.google.com/maps" target="_blank">Sat - Sun 10:00 am - 06:00 pm</a>
+            <div class="ft_header">
+                <div class="ft_header_frame">
+                    <p class="adress">286 Cadman Plaza, New York, NY 11238, United States</p>
+                    <ul class="social_list">
+                        <li class="list_soc" ><a class="link_social" href="http://twitter.com" target="_blank" rel="noopener noreferrer"><img class="icon_social" src="./assets/svg/u_twitter-alt.svg" alt="u_twitter-alt"></a></li>
+                        <li class="list_soc" ><a class="link_social" href="http://instagram.com" target="_blank" rel="noopener noreferrer"><img class="icon_social" src="./assets/svg/u_instagram.svg" alt="u_instagram"></a></li>
+                        <li class="list_soc" ><a class="link_social" href="http://facebook.com" target="_blank" rel="noopener noreferrer"><img class="icon_social" src="./assets/svg/u_facebook-f.svg" alt="u_facebook-f"></a></li>
+                    </ul>
+                </div>
+                <div class="schedule">
+                    <a class="sched_linkTomap" href="https://www.google.com/maps" target="_blank">Mon - Fri <br> 08:00 am - 07:00 pm</a>
+                    <a class="sched_linkTomap" href="https://www.google.com/maps" target="_blank">Sat - Sun <br> 10:00 am - 06:00 pm</a>
+                </div>
             </div>
             <div class="footer_line"></div>
             <div class="footer_rss">
-                <p class="year">2023</p>
-                <a href="https://rs.school/" target="_blank">The Rolling Scopes School</a>
-                <a href="https://github.com/david-anav" target="_blank">Tim Migalev</a>
+                <p class="year ftRss_typografy">2023</p>
+                <a class="ftRss_linkSchool ftRss_typografy" href="https://rs.school/js-stage0" target="_blank">The Rolling Scopes School</a>
+                <a class="ftRss_linkGit ftRss_typografy" href="https://github.com/david-anav" target="_blank">Artyom Migalev</a>
             </div>
         </div>
     </footer>
