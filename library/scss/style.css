@@ -342,8 +342,20 @@ body {
   margin: 0 auto;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body * {
   box-sizing: border-box;
+}
+body button {
+  cursor: pointer;
+}
+body .section_title:hover {
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-weight: 700;
+  cursor: pointer;
 }
 
 .header {
@@ -367,6 +379,10 @@ body * {
   font-weight: 400;
   line-height: 50px;
   letter-spacing: 0.6px;
+}
+.header .wrapper_header a .nameLib:hover {
+  color: #8E8E8E;
+  transition: 0.8s;
 }
 .header .wrapper_header .container {
   display: flex;
@@ -395,6 +411,14 @@ body * {
   font-weight: 400;
   line-height: 50px;
 }
+.header .wrapper_header .container .navigation .list_section .name_listSection:hover {
+  color: #8E8E8E;
+  transition: 0.8s;
+}
+.header .wrapper_header .container .your_prof .icon_prof {
+  background: #000;
+}
+
 .about {
   background: #FFF;
 }
@@ -409,10 +433,9 @@ body * {
   align-items: center;
   flex-wrap: nowrap;
 }
-.about .wrapper .aboutTitle_block .about_title {
+.about .wrapper .aboutTitle_block .section_title {
   color: #0C0C0E;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  font-family: Forum, sans-serif;
+  font-family: Forum;
   font-size: 40px;
   font-style: normal;
   font-weight: 400;
@@ -423,7 +446,7 @@ body * {
   padding: 20px 0 0 0;
   border-bottom: black;
 }
-.about .wrapper .aboutTitle_block .about_title::after {
+.about .wrapper .aboutTitle_block .section_title::after {
   content: "";
   background: #000;
   width: 50px;
@@ -668,6 +691,11 @@ body * {
   line-height: normal;
   letter-spacing: 1px;
 }
+.favorites .wrapper .grid .present_book .buy_book:hover {
+  background: #BB945F;
+  border: none;
+  transition: 0.8s;
+}
 .favorites .wrapper .grid .present_book .book {
   display: block;
   position: absolute;
@@ -690,6 +718,12 @@ body * {
   font-weight: 700;
   line-height: normal;
   letter-spacing: 1px;
+}
+.favorites .wrapper .grid .present_book .own_book:hover {
+  background: #BB945F;
+  border: none;
+  transition: 0.8s;
+  color: #0C0C0E;
 }
 .favorites .wrapper .grid #book5, .favorites .wrapper .grid #book6, .favorites .wrapper .grid #book7, .favorites .wrapper .grid #book8, .favorites .wrapper .grid #book9, .favorites .wrapper .grid #book10, .favorites .wrapper .grid #book11, .favorites .wrapper .grid #book12 {
   display: none;
@@ -881,6 +915,7 @@ body * {
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 .libraryCard .wrapper .find_card .form .form_body {
   width: 560px;
@@ -920,6 +955,7 @@ body * {
 .libraryCard .wrapper .find_card .form .form_btn {
   width: 242px;
   height: 44px;
+  margin-bottom: 30px;
   color: #0C0C0E;
   text-align: center;
   font-family: Inter;
@@ -931,6 +967,50 @@ body * {
   border-radius: 2px;
   border: 1px solid #0C0C0E;
 }
+.libraryCard .wrapper .get {
+  max-width: 456px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: flex-end;
+}
+.libraryCard .wrapper .get .get_title {
+  color: #000;
+  text-align: center;
+  font-family: Forum;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.6px;
+  margin: 0 0 35px 0;
+}
+.libraryCard .wrapper .get .get_text {
+  color: #000;
+  text-align: right;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px; /* 200% */
+  letter-spacing: 0.4px;
+  margin: 0 0 35px 0;
+}
+.libraryCard .wrapper .get .get_btn .btn_get {
+  width: 75px;
+  height: 30px;
+  border-radius: 2px;
+  border: 1px solid #0C0C0E;
+  color: #0C0C0E;
+  text-align: center;
+  font-family: Inter;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+}
+
 .contacts .wrapper .section_title {
   text-align: center;
   color: #0C0C0E;
@@ -1030,4 +1110,86 @@ body * {
   background-image: url(/library/assets/jpeg/map.jpg);
   width: 696px;
   height: 414px;
+}
+
+.footer {
+  margin-top: 41px;
+  background: #0C0C0E;
+  margin-bottom: 400px;
+}
+.footer .wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.footer .wrapper .ft_header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px 0 0 0;
+}
+.footer .wrapper .ft_header .ft_header_frame {
+  display: flex;
+  flex-direction: column;
+}
+.footer .wrapper .ft_header .ft_header_frame .adress {
+  color: #FFF;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 133.333% */
+  width: 229px;
+  margin: 0 0 18px 0;
+}
+.footer .wrapper .ft_header .ft_header_frame .social_list {
+  display: flex;
+  flex-direction: row;
+  padding-left: 0;
+  margin: 0;
+}
+.footer .wrapper .ft_header .ft_header_frame .social_list .list_soc {
+  list-style: none;
+  margin-right: 15px;
+}
+.footer .wrapper .ft_header .schedule {
+  display: flex;
+  flex-direction: column;
+}
+.footer .wrapper .ft_header .schedule .sched_linkTomap {
+  margin: 0 0 10px 0;
+  color: #FFF;
+  text-align: right;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 133.333% */
+  text-decoration: none;
+}
+.footer .wrapper .footer_line {
+  width: 100%;
+  height: 1px;
+  background: #FFFFFF;
+  margin: 38px 0 44px 0;
+}
+.footer .wrapper .footer_rss {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer .wrapper .footer_rss .ftRss_typografy {
+  color: #FFF;
+  text-align: center;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px; /* 200% */
+  letter-spacing: 2px;
+  text-decoration: none;
+}
+.footer .wrapper .footer_rss .year {
+  display: inline;
 }/*# sourceMappingURL=style.css.map */
