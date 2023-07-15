@@ -1,0 +1,147 @@
+.coffeShop {
+    .wrapper{
+        .section_title{
+            text-align: center;
+
+
+            color: #0C0C0E;
+            font-family: Forum;
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 40px; /* 100% */
+            letter-spacing: 2px;
+            text-transform: capitalize;
+            margin: 20px 0;
+        }
+        .section_title::after{
+            display: block;
+            content: "";
+            background-color: #0C0C0E;
+            width: 50px;
+            height: 1px;
+            margin: 20px auto 40px;
+        }
+        .coffeShop_text{
+
+            color: #000;
+            font-family: Inter;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 40px;
+            letter-spacing: 2px;
+            text-align: center;
+            margin: 0 0 40px 0;
+        }
+        .coffeShop_menu {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            .coffeTea {
+                width: 100%;
+                max-width: 438px;
+
+                .menu_title{
+                    color: #BB945F;
+                    font-family: Forum;
+                    font-size: 40px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 40px; /* 100% */
+                    letter-spacing: 2px;
+                    text-transform: capitalize;
+                }
+                .menu_position{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content:space-between;
+                    align-items: flex-end;
+
+                    .name_position{
+                        color: #000;
+                        font-family: Inter;
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 40px; /* 200% */
+                        letter-spacing: 2px;
+                        text-transform: capitalize;
+                        margin-top: 0 ;
+                    }
+                    .menu_price{
+                        color: #000;
+                        font-family: Forum;
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 40px; /* 200% */
+                        letter-spacing: 2px;
+                        text-transform: capitalize;
+
+                    }
+                    .menu_price::before {
+                        margin-right: 60px;
+                        display: inline-block;
+                        content: "";
+                        width: 100px;
+                        height: 1px;
+                        background: #BB945F;
+                        vertical-align: middle;
+                    }
+                }
+            }
+            .dessertsCakes{
+                width: 100%;
+                max-width: 438px;
+                .menu_title{
+                    color: #BB945F;
+                    font-family: Forum;
+                    font-size: 40px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 40px; /* 100% */
+                    letter-spacing: 2px;
+                    text-transform: capitalize;
+                }
+                .menu_position{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content:space-between;
+                    align-items: flex-end;
+                    .name_position{
+                        color: #000;
+                        font-family: Inter;
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 40px; /* 200% */
+                        letter-spacing: 2px;
+                        text-transform: capitalize;
+                        margin-top: 0 ;
+                    }
+                    .menu_price{
+                        color: #000;
+                        font-family: Forum;
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 40px; /* 200% */
+                        letter-spacing: 2px;
+                        text-transform: capitalize;
+
+                    }
+                    .menu_price::before {
+                        margin-right: 60px;
+                        display: inline-block;
+                        content: "";
+                        width: 100px;
+                        height: 1px;
+                        background: #BB945F;
+                        vertical-align: middle;
+                    }
+                }
+            }
+        }
+    }
+}
