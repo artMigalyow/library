@@ -333,7 +333,7 @@ template {
   src: url("/library/assets/font/inter-v12-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 body {
-  max-width: 1440px;
+  width: 1440px;
   margin: 0 auto;
 }
 
@@ -832,6 +832,105 @@ body * {
   vertical-align: middle;
 }
 
+.libraryCard {
+  width: 100%;
+}
+.libraryCard .wrapper .section_title {
+  text-align: center;
+  color: #0C0C0E;
+  font-family: Forum;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px; /* 100% */
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  margin: 20px 0;
+}
+.libraryCard .wrapper .section_title::after {
+  display: block;
+  content: "";
+  background-color: #0C0C0E;
+  width: 50px;
+  height: 1px;
+  margin: 20px auto 40px;
+}
+.libraryCard .wrapper .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.libraryCard .wrapper .find_card .title_form {
+  color: #000;
+  font-family: Inter;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.6px;
+  text-align: center;
+  margin: 0 0 20px 0;
+}
+.libraryCard .wrapper .find_card .form {
+  width: 600px;
+  height: 386px;
+  border: 3px solid #BB945F;
+  background: #FFF;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.libraryCard .wrapper .find_card .form .form_body {
+  width: 560px;
+  height: 272px;
+  background: #BB945F;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px 0 20px;
+}
+.libraryCard .wrapper .find_card .form .form_body .name_form {
+  color: #000;
+  font-family: Forum;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px; /* 166.667% */
+  letter-spacing: 0.6px;
+  margin: 20px 0 20px 0;
+}
+.libraryCard .wrapper .find_card .form .form_body .libraryCard_input {
+  width: 520px;
+  height: 66px;
+  border-radius: 10px;
+  background: #FFF;
+  padding: 8px 318px 8px 20px;
+  border: none;
+  margin: 0 0 20px 0;
+  color: #8E8E8E;
+  font-family: Forum;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px; /* 166.667% */
+  letter-spacing: 0.6px;
+}
+.libraryCard .wrapper .find_card .form .form_btn {
+  width: 242px;
+  height: 44px;
+  color: #0C0C0E;
+  text-align: center;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+  border-radius: 2px;
+  border: 1px solid #0C0C0E;
+}
 .contacts .wrapper .section_title {
   text-align: center;
   color: #0C0C0E;
@@ -857,6 +956,7 @@ body * {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-bottom: 60px;
 }
 .contacts .wrapper .contact_inf .text_inf {
   display: flex;

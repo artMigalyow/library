@@ -1,0 +1,122 @@
+.libraryCard {
+    width: 100%;
+    .wrapper {
+        .section_title {
+            text-align: center;
+
+
+            color: #0C0C0E;
+            font-family: Forum;
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 40px; /* 100% */
+            letter-spacing: 2px;
+            text-transform: capitalize;
+            margin: 20px 0;
+        }
+        .section_title::after{
+            display: block;
+            content: "";
+            background-color: #0C0C0E;
+            width: 50px;
+            height: 1px;
+            margin: 20px auto 40px;
+        }
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .find_card {
+
+            .title_form {
+                color: #000;
+                font-family: Inter;
+                font-size: 30px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                letter-spacing: 0.6px;
+                text-align: center;
+
+                margin: 0 0 20px 0;
+            }
+            .form {
+                width: 600px;
+                height: 386px;
+                border: 3px solid #BB945F;
+                background: #FFF;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+                align-items: center;
+
+                .form_body {
+                    width: 560px;
+                    height: 272px;
+                    background: #BB945F;
+                    margin-top: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    padding: 0 20px 0 20px;
+
+                    .name_form {
+                        color: #000;
+                        font-family: Forum;
+                        font-size: 30px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 50px; /* 166.667% */
+                        letter-spacing: 0.6px;
+                        margin: 20px 0 20px 0;
+                    }
+                    .libraryCard_input{
+                        width: 520px;
+                        height: 66px;
+                        border-radius: 10px;
+                        background: #FFF;
+                        padding: 8px 318px 8px 20px;
+                        border: none;
+                        margin: 0 0 20px 0;
+
+                        color: #8E8E8E;
+                        font-family: Forum;
+                        font-size: 30px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 50px; /* 166.667% */
+                        letter-spacing: 0.6px;
+                    }
+                }
+                .form_btn {
+                    width: 242px;
+                    height: 44px;
+
+                    color: #0C0C0E;
+                    text-align: center;
+                    font-family: Inter;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                    letter-spacing: 1px;
+
+                    border-radius: 2px;
+                    border: 1px solid #0C0C0E;
+                }
+            }
+        }
+        .get {
+            .get_title {
+            }
+            .get_text {
+            }
+            .get_btn {
+                .btn_get {
+                }
+            }
+        }
+    }
+}
