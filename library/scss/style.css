@@ -490,10 +490,21 @@ body .section_title:hover {
   background: #000;
   border-radius: 50px;
   border: none;
+  transition: 0.8s;
+  position: relative;
 }
 .about .wrapper .carusel_pagination .pagination:hover {
   background: #BB945F;
   border: none;
+}
+.about .wrapper .carusel_pagination .pagination::after {
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  bottom: -5px;
+  left: -5px;
 }
 
 .welcom .welcomBlock_bg {
