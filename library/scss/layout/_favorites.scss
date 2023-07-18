@@ -31,6 +31,7 @@
             font-weight: 700;
             line-height: normal;
         }
+
         .favForms {
             display: flex;
             flex-direction: row;
@@ -42,7 +43,7 @@
                 position: absolute;
                 opacity: 0;
             }
-            label {
+            .name_radiobtn {
                 color: #000;
                 font-family: Inter;
                 font-size: 20px;
@@ -51,6 +52,7 @@
                 line-height: normal;
                 text-transform: capitalize;
                 cursor: pointer;
+                padding: 5px 5px;
             }
             .fake_radiobtn {
                 display: inline-block;
@@ -78,6 +80,9 @@
             }
             .real_radiobtn:checked + .fake_radiobtn::before {
                 display: inline-block;
+                .name_btn{
+                    color: #BB945F;
+                }
             }
         }
         .grid {

@@ -67,10 +67,23 @@
                 background: #000;
                 border-radius: 50px;
                 border: none;
+                transition: 0.8s;
+                position: relative;
+
             }
             .pagination:hover {
                 background: #BB945F;
                 border: none;
+            }
+            .pagination::after{
+                content: '';
+                position: absolute;
+                width: 26px;
+                height: 26px;
+                border-radius: 50%;
+                // background: gray;
+                bottom: -5px;
+                left: -5px;
             }
         }
     }

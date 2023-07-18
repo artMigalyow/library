@@ -414,6 +414,7 @@ body .section_title:hover {
 .header .wrapper_header .container .navigation .list_section .name_listSection:hover {
   color: #8E8E8E;
   transition: 0.8s;
+  font-weight: 700;
 }
 .header .wrapper_header .container .your_prof .icon_prof {
   background: #000;
@@ -490,10 +491,21 @@ body .section_title:hover {
   background: #000;
   border-radius: 50px;
   border: none;
+  transition: 0.8s;
+  position: relative;
 }
 .about .wrapper .carusel_pagination .pagination:hover {
   background: #BB945F;
   border: none;
+}
+.about .wrapper .carusel_pagination .pagination::after {
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  bottom: -5px;
+  left: -5px;
 }
 
 .welcom .welcomBlock_bg {
@@ -566,7 +578,7 @@ body .section_title:hover {
   position: absolute;
   opacity: 0;
 }
-.favorites .wrapper .favForms label {
+.favorites .wrapper .favForms .name_radiobtn {
   color: #000;
   font-family: Inter;
   font-size: 20px;
@@ -575,6 +587,7 @@ body .section_title:hover {
   line-height: normal;
   text-transform: capitalize;
   cursor: pointer;
+  padding: 5px 5px;
 }
 .favorites .wrapper .favForms .fake_radiobtn {
   display: inline-block;
@@ -601,6 +614,9 @@ body .section_title:hover {
 }
 .favorites .wrapper .favForms .real_radiobtn:checked + .fake_radiobtn::before {
   display: inline-block;
+}
+.favorites .wrapper .favForms .real_radiobtn:checked + .fake_radiobtn::before .name_btn {
+  color: #BB945F;
 }
 .favorites .wrapper .grid {
   display: grid;
@@ -964,8 +980,13 @@ body .section_title:hover {
   font-weight: 700;
   line-height: normal;
   letter-spacing: 1px;
+  background-color: #FFFFFF;
   border-radius: 2px;
   border: 1px solid #0C0C0E;
+}
+.libraryCard .wrapper .find_card .form .form_btn:hover {
+  background: #BB945F;
+  border: none;
 }
 .libraryCard .wrapper .get {
   max-width: 456px;
@@ -1009,6 +1030,10 @@ body .section_title:hover {
   font-weight: 700;
   line-height: normal;
   letter-spacing: 1px;
+}
+.libraryCard .wrapper .get .get_btn .btn_get:hover {
+  background: #BB945F;
+  border: none;
 }
 
 .contacts .wrapper .section_title {
