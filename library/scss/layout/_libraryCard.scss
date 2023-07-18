@@ -104,9 +104,13 @@
                     font-weight: 700;
                     line-height: normal;
                     letter-spacing: 1px;
-
+                    background-color: #FFFFFF;
                     border-radius: 2px;
                     border: 1px solid #0C0C0E;
+                }
+                .form_btn:hover{
+                    background: #BB945F;
+                    border: none;
                 }
             }
         }
@@ -156,6 +160,10 @@
                     font-weight: 700;
                     line-height: normal;
                     letter-spacing: 1px;
+                }
+                .btn_get:hover{
+                    background: #BB945F;
+                    border: none;
                 }
             }
         }
