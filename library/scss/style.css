@@ -755,7 +755,7 @@ body .section_title:hover {
   line-height: 40px; /* 100% */
   letter-spacing: 2px;
   text-transform: capitalize;
-  margin: 20px 0;
+  margin: 60px 0 20px 0;
 }
 .coffeShop .wrapper .section_title::after {
   display: block;
@@ -1016,6 +1016,13 @@ body .section_title:hover {
   line-height: 40px; /* 200% */
   letter-spacing: 0.4px;
   margin: 0 0 35px 0;
+}
+.libraryCard .wrapper .get .get_btn {
+  max-width: 170px;
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
 }
 .libraryCard .wrapper .get .get_btn .btn_get {
   width: 75px;
