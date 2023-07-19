@@ -1035,6 +1035,7 @@ body .section_title:hover {
   height: 30px;
   border-radius: 2px;
   border: 1px solid #0C0C0E;
+  background-color: #FFFFFF;
   color: #0C0C0E;
   text-align: center;
   font-family: Inter;
