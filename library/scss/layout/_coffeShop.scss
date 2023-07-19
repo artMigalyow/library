@@ -52,7 +52,7 @@
                     letter-spacing: 2px;
                     text-transform: capitalize;
                 }
-                .menu_position{
+                .coffeTea-menu_position{
                     display: flex;
                     flex-direction: row;
                     justify-content:space-between;
@@ -93,8 +93,10 @@
             }
             .dessertsCakes{
                 width: 100%;
-                max-width: 438px;
-                .menu_title{
+                max-width: 482px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;                .menu_title{
                     color: #BB945F;
                     font-family: Forum;
                     font-size: 40px;
@@ -104,11 +106,11 @@
                     letter-spacing: 2px;
                     text-transform: capitalize;
                 }
-                .menu_position{
+                .dessertsCakes-menu_position{
                     display: flex;
                     flex-direction: row;
                     justify-content:space-between;
-                    align-items: flex-end;
+                    align-items: baseline;
                     .name_position{
                         color: #000;
                         font-family: Inter;
@@ -133,6 +135,7 @@
                     }
                     .menu_price::before {
                         margin-right: 60px;
+                        margin-left: 60px;
                         display: inline-block;
                         content: "";
                         width: 100px;

@@ -33,6 +33,7 @@
             width: 100%;
             .navigation {
                 width: 584px;
+                .nav_list{
                     display: flex;
                     flex-direction: row;
                     justify-content: space-between;
@@ -51,9 +52,11 @@
                             color: #8E8E8E;
                             transition: 0.8s;
                             font-weight: 700;
-                            
+
                         }
-                    }
+                    } 
+                }
+
             }
             .your_prof {
                 .icon_prof {

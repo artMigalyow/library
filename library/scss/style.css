@@ -395,15 +395,17 @@ body .section_title:hover {
 }
 .header .wrapper_header .container .navigation {
   width: 584px;
+}
+.header .wrapper_header .container .navigation .nav_list {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding-left: 0;
 }
-.header .wrapper_header .container .navigation .list_section {
+.header .wrapper_header .container .navigation .nav_list .list_section {
   list-style: none;
 }
-.header .wrapper_header .container .navigation .list_section .name_listSection {
+.header .wrapper_header .container .navigation .nav_list .list_section .name_listSection {
   color: #FFF;
   font-family: Inter, sans-serif;
   font-size: 20px;
@@ -411,7 +413,7 @@ body .section_title:hover {
   font-weight: 400;
   line-height: 50px;
 }
-.header .wrapper_header .container .navigation .list_section .name_listSection:hover {
+.header .wrapper_header .container .navigation .nav_list .list_section .name_listSection:hover {
   color: #8E8E8E;
   transition: 0.8s;
   font-weight: 700;
@@ -795,13 +797,13 @@ body .section_title:hover {
   letter-spacing: 2px;
   text-transform: capitalize;
 }
-.coffeShop .wrapper .coffeShop_menu .coffeTea .menu_position {
+.coffeShop .wrapper .coffeShop_menu .coffeTea .coffeTea-menu_position {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
 }
-.coffeShop .wrapper .coffeShop_menu .coffeTea .menu_position .name_position {
+.coffeShop .wrapper .coffeShop_menu .coffeTea .coffeTea-menu_position .name_position {
   color: #000;
   font-family: Inter;
   font-size: 20px;
@@ -812,7 +814,7 @@ body .section_title:hover {
   text-transform: capitalize;
   margin-top: 0;
 }
-.coffeShop .wrapper .coffeShop_menu .coffeTea .menu_position .menu_price {
+.coffeShop .wrapper .coffeShop_menu .coffeTea .coffeTea-menu_position .menu_price {
   color: #000;
   font-family: Forum;
   font-size: 20px;
@@ -822,7 +824,7 @@ body .section_title:hover {
   letter-spacing: 2px;
   text-transform: capitalize;
 }
-.coffeShop .wrapper .coffeShop_menu .coffeTea .menu_position .menu_price::before {
+.coffeShop .wrapper .coffeShop_menu .coffeTea .coffeTea-menu_position .menu_price::before {
   margin-right: 60px;
   display: inline-block;
   content: "";
@@ -833,7 +835,10 @@ body .section_title:hover {
 }
 .coffeShop .wrapper .coffeShop_menu .dessertsCakes {
   width: 100%;
-  max-width: 438px;
+  max-width: 482px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 .coffeShop .wrapper .coffeShop_menu .dessertsCakes .menu_title {
   color: #BB945F;
@@ -845,13 +850,13 @@ body .section_title:hover {
   letter-spacing: 2px;
   text-transform: capitalize;
 }
-.coffeShop .wrapper .coffeShop_menu .dessertsCakes .menu_position {
+.coffeShop .wrapper .coffeShop_menu .dessertsCakes .dessertsCakes-menu_position {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: baseline;
 }
-.coffeShop .wrapper .coffeShop_menu .dessertsCakes .menu_position .name_position {
+.coffeShop .wrapper .coffeShop_menu .dessertsCakes .dessertsCakes-menu_position .name_position {
   color: #000;
   font-family: Inter;
   font-size: 20px;
@@ -862,7 +867,7 @@ body .section_title:hover {
   text-transform: capitalize;
   margin-top: 0;
 }
-.coffeShop .wrapper .coffeShop_menu .dessertsCakes .menu_position .menu_price {
+.coffeShop .wrapper .coffeShop_menu .dessertsCakes .dessertsCakes-menu_position .menu_price {
   color: #000;
   font-family: Forum;
   font-size: 20px;
@@ -872,8 +877,9 @@ body .section_title:hover {
   letter-spacing: 2px;
   text-transform: capitalize;
 }
-.coffeShop .wrapper .coffeShop_menu .dessertsCakes .menu_position .menu_price::before {
+.coffeShop .wrapper .coffeShop_menu .dessertsCakes .dessertsCakes-menu_position .menu_price::before {
   margin-right: 60px;
+  margin-left: 60px;
   display: inline-block;
   content: "";
   width: 100px;
