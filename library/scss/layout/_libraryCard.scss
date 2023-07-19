@@ -145,6 +145,11 @@
 
             }
             .get_btn {
+                max-width: 170px;
+                width: 100%;
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: space-between;
                 .btn_get {
                     width: 75px;
                     height: 30px;
