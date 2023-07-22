@@ -39,10 +39,6 @@
             max-width: 700px;
             width: 100%;
             margin-bottom: 40px;
-            input[type="radio"] {
-                position: absolute;
-                opacity: 0;
-            }
             .name_radiobtn {
                 color: #000;
                 font-family: Inter;
@@ -53,35 +49,40 @@
                 text-transform: capitalize;
                 cursor: pointer;
                 padding: 5px 5px;
-            }
-            .fake_radiobtn {
-                display: inline-block;
-                width: 17px;
-                height: 17px;
-                border: 1px solid black;
-                border-radius: 50%;
-                position: relative;
-                margin-right: 20px;
-                cursor: pointer;
-            }
-            .fake_radiobtn::before {
-                content: "";
-                display: inline-block;
-                width: 7px;
-                height: 7px;
-                border-radius: 50%;
-                background: #0C0C0E;
-                position: absolute;
-                left: 50%;
-                top:50%;
-                transform: translate(-50%, -50%);
-                display: none;
+                input[type="radio"] {
+                    position: absolute;
+                    opacity: 0;
+                }
+                .fake_radiobtn {
+                    display: inline-block;
+                    width: 17px;
+                    height: 17px;
+                    border: 1px solid black;
+                    border-radius: 50%;
+                    position: relative;
+                    margin-right: 20px;
+                    cursor: pointer;
+                }
+                .fake_radiobtn::before {
+                    content: "";
+                    display: inline-block;
+                    width: 7px;
+                    height: 7px;
+                    border-radius: 50%;
+                    background: #0C0C0E;
+                    position: absolute;
+                    left: 50%;
+                    top:50%;
+                    transform: translate(-50%, -50%);
+                    display: none;
 
-            }
-            .real_radiobtn:checked + .fake_radiobtn::before {
-                display: inline-block;
-                .name_btn{
-                    color: #BB945F;
+                }
+                .real_radiobtn:checked + .fake_radiobtn::before {
+                    display: inline-block;
+
+                }
+                input[type=radio]:checked~span{
+                    font-weight: 700;
                 }
             }
         }
