@@ -715,12 +715,6 @@ body .section_title:hover {
   line-height: normal;
   letter-spacing: 1px;
 }
-.favorites .wrapper .grid .present_book .own_book:hover {
-  background: #BB945F;
-  border: none;
-  transition: 0.8s;
-  color: #0C0C0E;
-}
 .favorites .wrapper .grid #book5, .favorites .wrapper .grid #book6, .favorites .wrapper .grid #book7, .favorites .wrapper .grid #book8, .favorites .wrapper .grid #book9, .favorites .wrapper .grid #book10, .favorites .wrapper .grid #book11, .favorites .wrapper .grid #book12 {
   display: none;
 }
