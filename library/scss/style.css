@@ -399,19 +399,6 @@ body .section_title:hover {
 .header .wrapper_header .container .your_prof .icon_prof {
   background: #000;
 }
-.header .wrapper_header .container .burger_menu {
-  width: 45px;
-  height: 20px;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-}
-.header .wrapper_header .container .burger_menu .burger_line {
-  width: 45px;
-  height: 2px;
-  background: #FFFFFF;
-}
 
 .about {
   background: #FFF;
