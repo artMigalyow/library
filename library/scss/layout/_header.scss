@@ -33,6 +33,7 @@
             width: 100%;
             .navigation {
                 width: 584px;
+                // display: none;
                 .nav_list{
                     display: flex;
                     flex-direction: row;
@@ -54,13 +55,28 @@
                             font-weight: 700;
 
                         }
-                    } 
+                    }
                 }
 
             }
             .your_prof {
                 .icon_prof {
                     background: #000;
+                }
+            }
+            .burger_menu {
+                width: 45px;
+                height: 20px;
+
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+
+                .burger_line {
+                    width: 45px;
+                    height: 2px;
+                    background: #FFFFFF;
                 }
             }
         }
