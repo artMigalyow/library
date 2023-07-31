@@ -50,3 +50,11 @@ body{
 
 
 }
+@media (max-width: 1024px) and (min-width: 768px ) {
+    body{
+        width: 768px;
+    }
+    .wrapper {
+        width: 728px;
+    }
+}

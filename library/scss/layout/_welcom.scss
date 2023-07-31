@@ -1,4 +1,7 @@
 .welcom{
+    .welcom_bg-tablet{
+        display: none;
+    }
     .welcomBlock_bg {
         max-width: 600px;
         width: 100%;
@@ -27,5 +30,19 @@
             text-transform: uppercase;
 
         }
+    }
+}
+@media (max-width: 1024px) and (min-width: 768px ) {
+    .welcom{
+        .welcom_bg-screen {
+            display: none;;
+        }
+        .welcom_bg-tablet{
+            display: block;
+        }
+        .welcomBlock_bg{
+
+        }
+
     }
 }

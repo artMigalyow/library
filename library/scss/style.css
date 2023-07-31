@@ -336,6 +336,14 @@ body .section_title:hover {
   cursor: pointer;
 }
 
+@media (max-width: 1024px) and (min-width: 768px) {
+  body {
+    width: 768px;
+  }
+  .wrapper {
+    width: 728px;
+  }
+}
 .header {
   width: 100%;
   background: #0C0C0E;
@@ -399,7 +407,31 @@ body .section_title:hover {
 .header .wrapper_header .container .your_prof .icon_prof {
   background: #000;
 }
+.header .wrapper_header .container .header_humb {
+  width: 45px;
+  height: 20px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.header .wrapper_header .container .header_humb .humb_line {
+  width: 45px;
+  height: 2px;
+  background: #FFF;
+}
 
+@media (max-width: 1024px) and (min-width: 768px) {
+  .header .wrapper_header .container {
+    max-width: 113px;
+    width: 100%;
+  }
+  .header .wrapper_header .container .navigation {
+    display: none;
+  }
+  .header .wrapper_header .container .header_humb {
+    display: flex;
+  }
+}
 .about {
   background: #FFF;
 }
@@ -488,6 +520,9 @@ body .section_title:hover {
   left: -5px;
 }
 
+.welcom .welcom_bg-tablet {
+  display: none;
+}
 .welcom .welcomBlock_bg {
   max-width: 600px;
   width: 100%;
@@ -515,6 +550,14 @@ body .section_title:hover {
   text-transform: uppercase;
 }
 
+@media (max-width: 1024px) and (min-width: 768px) {
+  .welcom .welcom_bg-screen {
+    display: none;
+  }
+  .welcom .welcom_bg-tablet {
+    display: block;
+  }
+}
 .favorites {
   width: 100%;
 }
