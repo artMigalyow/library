@@ -1148,6 +1148,7 @@ body .section_title:hover {
   font-weight: 400;
   line-height: 20px; /* 133.333% */
   width: 229px;
+  text-decoration: none;
   margin: 0 0 18px 0;
 }
 .footer .wrapper .ft_header .ft_header_frame .social_list {
