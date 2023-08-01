@@ -519,7 +519,34 @@ body .section_title:hover {
   bottom: -5px;
   left: -5px;
 }
+.about .wrapper .carusel_pagination .pagination:nth-last-child(-n+2) {
+  display: none;
+}
 
+@media (max-width: 1024px) and (min-width: 768px) {
+  .about .wrapper .aboutTitle_block .about_text {
+    text-shadow: none;
+  }
+  .about .wrapper .about_carusel {
+    max-width: 568px;
+    align-items: center;
+  }
+  .about .wrapper .about_carusel .arrow {
+    background: #FFF;
+    border: none;
+    width: 28px;
+    height: 23px;
+  }
+  .about .wrapper .about_carusel #about_carusel_img2, .about .wrapper .about_carusel #about_carusel_img3 {
+    display: none;
+  }
+  .about .wrapper .carusel_pagination {
+    max-width: 120px;
+  }
+  .about .wrapper .carusel_pagination .pagination:nth-last-child(-n+2) {
+    display: inline;
+  }
+}
 .welcom .welcom_bg-tablet {
   display: none;
 }
@@ -762,6 +789,13 @@ body .section_title:hover {
   display: none;
 }
 
+@media (max-width: 1024px) and (min-width: 768px) {
+  .favorites .wrapper .grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .coffeShop .wrapper .section_title {
   text-align: center;
   color: #0C0C0E;
