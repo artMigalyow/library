@@ -31,7 +31,6 @@
             .text_inf {
                 display: flex;
                 flex-direction: column;
-                // justify-content: space-between;
                 .title_inf {
                     color: #000;
                     text-align: center;
@@ -103,6 +102,21 @@
             .map {
                 width: 696px;
                 height: 414px;
+            }
+        }
+    }
+}
+@media (max-width: 1024px) and (min-width: 768px) {
+    .contacts {
+        .wrapper {
+            .contact_inf{
+                flex-direction: column;
+                .text_inf{
+                    margin-bottom: 100px;
+                }
+                .map {
+                    margin: 0 auto;
+                }
             }
         }
     }

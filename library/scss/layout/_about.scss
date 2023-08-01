@@ -49,6 +49,9 @@
             display: flex;
             flex-direction: row;
             justify-content: space-between;
+            .arrow {
+                display: none;
+            }
             .about_img1 {
                 width: 100%;
                 max-width: 450px;
@@ -102,6 +105,7 @@
                 max-width: 568px;
                 align-items: center;
                 .arrow {
+                    display: inline;
                     background: #FFF;
                     border: none;
                     width: 28px;

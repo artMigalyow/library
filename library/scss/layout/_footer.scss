@@ -21,7 +21,7 @@
                     font-weight: 400;
                     line-height: 20px; /* 133.333% */
                     width: 229px;
-
+                    text-decoration: none;
                     margin: 0 0 18px 0;
                 }
                 .social_list{
@@ -82,4 +82,35 @@
         }
     }
 
+}
+@media (max-width: 1024px) and (min-width: 768px) {
+    .footer {
+        margin-top: 40px;
+        .wrapper {
+            .ft_header {
+                .ft_header_frame {
+                    .adress {
+                        margin: 0 0 10px 0;
+                    }
+                    .social_list {
+                        margin: 8px 0 8px 0;
+                    }
+                }
+                .schedule {
+                    .sched_linkTomap:last-child {
+                        margin: 0;
+                    }
+                }
+            }
+            .footer_line {
+                margin: 30px 0 44px 0;
+            }
+            .footer_rss {
+                .year {
+                    margin: 0;
+                }
+                margin-bottom: 44px;
+            }
+        }
+    }
 }

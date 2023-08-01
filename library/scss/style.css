@@ -485,6 +485,9 @@ body .section_title:hover {
   flex-direction: row;
   justify-content: space-between;
 }
+.about .wrapper .about_carusel .arrow {
+  display: none;
+}
 .about .wrapper .about_carusel .about_img1 {
   width: 100%;
   max-width: 450px;
@@ -532,6 +535,7 @@ body .section_title:hover {
     align-items: center;
   }
   .about .wrapper .about_carusel .arrow {
+    display: inline;
     background: #FFF;
     border: none;
     width: 28px;
@@ -937,6 +941,20 @@ body .section_title:hover {
   vertical-align: middle;
 }
 
+@media (max-width: 1024px) and (min-width: 768px) {
+  .coffeShop .wrapper .coffeShop_text {
+    max-width: 728px;
+  }
+  .coffeShop .wrapper .coffeShop_menu {
+    display: inline-block;
+  }
+  .coffeShop .wrapper .coffeShop_menu .coffeTea {
+    float: left;
+  }
+  .coffeShop .wrapper .coffeShop_menu .dessertsCakes {
+    float: right;
+  }
+}
 .libraryCard {
   width: 100%;
 }
@@ -1099,6 +1117,28 @@ body .section_title:hover {
   border: none;
 }
 
+@media (max-width: 1024px) and (min-width: 768px) {
+  .libraryCard .wrapper .section_title {
+    margin: 0 0 20px 0;
+  }
+  .libraryCard .wrapper .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .libraryCard .wrapper .container .find_card .form {
+    margin-bottom: 21px;
+  }
+  .libraryCard .wrapper .container .get {
+    width: 100%;
+    max-width: 768px;
+    align-items: center;
+  }
+  .libraryCard .wrapper .container .get .get_text {
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+  }
+}
 .contacts .wrapper .section_title {
   text-align: center;
   color: #0C0C0E;
@@ -1199,6 +1239,17 @@ body .section_title:hover {
   height: 414px;
 }
 
+@media (max-width: 1024px) and (min-width: 768px) {
+  .contacts .wrapper .contact_inf {
+    flex-direction: column;
+  }
+  .contacts .wrapper .contact_inf .text_inf {
+    margin-bottom: 100px;
+  }
+  .contacts .wrapper .contact_inf .map {
+    margin: 0 auto;
+  }
+}
 .footer {
   margin-top: 41px;
   background: #0C0C0E;
@@ -1225,6 +1276,7 @@ body .section_title:hover {
   font-weight: 400;
   line-height: 20px; /* 133.333% */
   width: 229px;
+  text-decoration: none;
   margin: 0 0 18px 0;
 }
 .footer .wrapper .ft_header .ft_header_frame .social_list {
@@ -1278,4 +1330,28 @@ body .section_title:hover {
 }
 .footer .wrapper .footer_rss .year {
   display: inline;
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+  .footer {
+    margin-top: 40px;
+  }
+  .footer .wrapper .ft_header .ft_header_frame .adress {
+    margin: 0 0 10px 0;
+  }
+  .footer .wrapper .ft_header .ft_header_frame .social_list {
+    margin: 8px 0 8px 0;
+  }
+  .footer .wrapper .ft_header .schedule .sched_linkTomap:last-child {
+    margin: 0;
+  }
+  .footer .wrapper .footer_line {
+    margin: 30px 0 44px 0;
+  }
+  .footer .wrapper .footer_rss {
+    margin-bottom: 44px;
+  }
+  .footer .wrapper .footer_rss .year {
+    margin: 0;
+  }
 }/*# sourceMappingURL=style.css.map */
