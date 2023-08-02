@@ -148,3 +148,21 @@
         }
     }
 }
+@media (max-width: 1024px) and (min-width: 768px) {
+    .coffeShop {
+        .wrapper {
+            .coffeShop_text {
+                max-width: 728px;
+            }
+            .coffeShop_menu {
+                display: inline-block;
+                .coffeTea {
+                    float: left;
+                }
+                .dessertsCakes {
+                    float: right;
+                }
+            }
+        }
+    }
+}
