@@ -63,7 +63,36 @@
                     background: #000;
                 }
             }
+            .header_humb{
+                width: 45px;
+                height: 20px;
 
+                display: none;
+                flex-direction: column;
+                justify-content: space-between;
+                .humb_line{
+                    width: 45px;
+                    height: 2px;
+                    background: #FFF;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1024px) and (min-width: 768px ) {
+    .header{
+        .wrapper_header{
+            .container{
+                max-width: 113px;
+                width: 100%;
+                .navigation {
+                    display: none;
+                }
+                .header_humb{
+                    display: flex;
+                }
+
+            }
         }
     }
 }
