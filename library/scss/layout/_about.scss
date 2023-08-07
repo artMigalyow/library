@@ -123,6 +123,9 @@
                 .pagination:nth-last-child(-n+2) {
                     display: inline;
                 }
+                .pagination:first-child {
+                    background: #BB945F;
+                }
             }
         }
     }
