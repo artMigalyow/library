@@ -445,7 +445,7 @@ body .section_title:hover {
     display: flex;
   }
   .header .wrapper_header .open_burger_menu {
-    display: none;
+    display: flex;
     flex-direction: column;
     align-items: center;
     width: 332px;
@@ -453,7 +453,7 @@ body .section_title:hover {
     background: #000;
     position: absolute;
     top: 0;
-    right: -20px;
+    right: -100%;
     z-index: 3;
   }
   .header .wrapper_header .open_burger_menu .open_bur_menu_header {
@@ -489,6 +489,10 @@ body .section_title:hover {
     color: #8E8E8E;
     transition: 0.8s;
     font-weight: 700;
+  }
+  .header .wrapper_header .openbur {
+    right: -20px;
+    animation-duration: 2s;
   }
 }
 .about {
