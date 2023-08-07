@@ -49,6 +49,9 @@
             display: flex;
             flex-direction: row;
             justify-content: space-between;
+            .arrow {
+                display: none;
+            }
             .about_img1 {
                 width: 100%;
                 max-width: 450px;
@@ -81,9 +84,48 @@
                 width: 26px;
                 height: 26px;
                 border-radius: 50%;
-                // background: gray;
                 bottom: -5px;
                 left: -5px;
+            }
+            .pagination:first-child {
+                background: #BB945F;
+            }
+            .pagination:nth-last-child(-n+2) {
+                display: none;
+            }
+        }
+    }
+}
+@media (max-width: 1024px) and (min-width: 768px) {
+    .about{
+        .wrapper{
+            .aboutTitle_block{
+                .about_text{
+                    text-shadow: none;
+                }
+            }
+            .about_carusel{
+                max-width: 568px;
+                align-items: center;
+                .arrow {
+                    display: inline;
+                    background: #FFF;
+                    border: none;
+                    width: 28px;
+                    height: 23px
+                }
+                #about_carusel_img2, #about_carusel_img3 {
+                    display: none;
+                }
+            }
+            .carusel_pagination {
+                max-width: 120px;
+                .pagination:nth-last-child(-n+2) {
+                    display: inline;
+                }
+                .pagination:first-child {
+                    background: #BB945F;
+                }
             }
         }
     }

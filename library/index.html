@@ -23,6 +23,11 @@
                     </ul>
                 </nav>
                 <a href="#" class="your_prof"><img src="./assets/svg/icon_profile.svg" alt="icon_prof" class="icon_prof"></a>
+                <div class="header_humb">
+                    <div class="humb_line"></div>
+                    <div class="humb_line"></div>
+                    <div class="humb_line"></div>
+                </div>
             </div>
         </div>
     </header>
@@ -33,7 +38,8 @@
                 <h2 class="welcom_text">to the Brooklyn</h2>
                 <h2 class="welcom_text">Library</h2>
             </div>
-            <img src="./assets/png/Welcome.png" alt="welcom" class="welcom_bg">
+            <img src="./assets/png/Welcome.png" alt="welcom" class="welcom_bg-screen">
+            <img src="./assets/png/Welcome- 768px.png" alt="welcom" class="welcom_bg-tablet">
         </section>
         <section class="about" id="about">
             <div class="wrapper">
@@ -42,11 +48,16 @@
                     <p class="about_text">The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop inside </p>
                 </div>
                 <div class="about_carusel">
-                    <img src="./assets/jpeg/about_image1.jpg" alt="about_img1" class="about_img1">
-                    <img src="./assets/jpeg/about_image2.jpg" alt="about_img2" class="about_img1">
-                    <img src="./assets/jpeg/about_image3.jpg" alt="about_img3" class="about_img1">
+                    <button class="arrow"><img src="./assets/svg/Arrow left2.png" class="arr_left" alt="arrow_left"></button>
+                    <img src="./assets/jpeg/about_image1.jpg" alt="about_img1" id="about_carusel_img1" class="about_img1">
+                    <img src="./assets/jpeg/about_image2.jpg" alt="about_img2" id="about_carusel_img2" class="about_img1">
+                    <img src="./assets/jpeg/about_image3.jpg" alt="about_img3" id="about_carusel_img3" class="about_img1">
+                    <button class="arrow"><img src="./assets/svg/Arrow right.svg" class="arr_right" alt="arrow_right"></button>
+
                 </div>
                 <div class="carusel_pagination">
+                    <button class="pagination"></button>
+                    <button class="pagination"></button>
                     <button class="pagination"></button>
                     <button class="pagination"></button>
                     <button class="pagination"></button>
@@ -58,28 +69,27 @@
                 <h2 class="section_title">Favorites</h2>
                 <p class="favorites_pick">Pick favorites of season</p>
                 <form class="favForms">
-                    <label class="name_radiobtn" >
-                        <input type="radio" name="season" class="real_radiobtn">
+                    <label class="name_radiobtn"  >
+                        <input type="radio" name="season" checked  id="winter" class="real_radiobtn">
                         <span class="fake_radiobtn"></span>
                         <span class="name_btn">winter</span>
                     </label>
                     <label class="name_radiobtn">
-                        <input type="radio" name="season" class="real_radiobtn">
+                        <input type="radio" name="season" id="spring" class="real_radiobtn">
                         <span class="fake_radiobtn"></span>
                         <span class="name_btn">Spring</span>
                     </label>
-                    <label class="name_radiobtn" for="summer">
-                        <input type="radio" name="season" class="real_radiobtn" id="summer">
+                    <label class="name_radiobtn">
+                        <input type="radio" name="season" id="summer" class="real_radiobtn" id="summer">
                         <span class="fake_radiobtn"></span>
                         <span class="name_btn">summer</span>
                     </label>
                     <label class="name_radiobtn">
-                        <input type="radio" name="season" class="real_radiobtn">
+                        <input type="radio" name="season" id="autumn" class="real_radiobtn">
                         <span class="fake_radiobtn"></span>
                         <span class="name_btn">Autumn</span>
                     </label>
                 </form>
-
                 <div class="grid">
                     <div class="present_book" id="book1">
                         <div class="bg-description">
@@ -346,9 +356,7 @@
         <div class="wrapper">
             <div class="ft_header">
                 <div class="ft_header_frame">
-                    <p class="adress">286 Cadman Plaza, New York, NY 11238, United States</p>
-                    <ul class="social_list">
-                        <li class="list_soc" ><a class="link_social" href="http://twitter.com" target="_blank" rel="noopener noreferrer"><img class="icon_social" src="./assets/svg/u_twitter-alt.svg" alt="u_twitter-alt"></a></li>
+                        <a href="https://www.google.com/maps/place/286+Cadman+Plaza+W,+Brooklyn,+NY+11201,+%D0%A1%D0%A8%D0%90"  target="_blank" class="adress">286 Cadman Plaza, New York, NY 11238, United States</a>
                         <li class="list_soc" ><a class="link_social" href="http://instagram.com" target="_blank" rel="noopener noreferrer"><img class="icon_social" src="./assets/svg/u_instagram.svg" alt="u_instagram"></a></li>
                         <li class="list_soc" ><a class="link_social" href="http://facebook.com" target="_blank" rel="noopener noreferrer"><img class="icon_social" src="./assets/svg/u_facebook-f.svg" alt="u_facebook-f"></a></li>
                     </ul>
