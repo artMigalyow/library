@@ -612,6 +612,9 @@ body .section_title:hover {
   .about .wrapper .carusel_pagination .pagination:nth-last-child(-n+2) {
     display: inline;
   }
+  .about .wrapper .carusel_pagination .pagination:first-child {
+    background: #BB945F;
+  }
 }
 .welcom .welcom_bg-tablet {
   display: none;
