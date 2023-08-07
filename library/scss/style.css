@@ -522,6 +522,9 @@ body .section_title:hover {
   bottom: -5px;
   left: -5px;
 }
+.about .wrapper .carusel_pagination .pagination:first-child {
+  background: #BB945F;
+}
 .about .wrapper .carusel_pagination .pagination:nth-last-child(-n+2) {
   display: none;
 }

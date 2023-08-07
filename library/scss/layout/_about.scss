@@ -87,6 +87,9 @@
                 bottom: -5px;
                 left: -5px;
             }
+            .pagination:first-child {
+                background: #BB945F;
+            }
             .pagination:nth-last-child(-n+2) {
                 display: none;
             }
