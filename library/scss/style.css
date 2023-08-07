@@ -419,9 +419,22 @@ body .section_title:hover {
   height: 2px;
   background: #FFF;
 }
+.header .wrapper_header .container .header_humb .header_humb_open {
+  display: none;
+}
+.header .wrapper_header .open_burger_menu {
+  display: none;
+}
 
 @media (max-width: 1024px) and (min-width: 768px) {
+  .header {
+    background-color: #0C0C0E;
+  }
+  .header .wrapper_header {
+    position: relative;
+  }
   .header .wrapper_header .container {
+    display: flex;
     max-width: 113px;
     width: 100%;
   }
@@ -430,6 +443,52 @@ body .section_title:hover {
   }
   .header .wrapper_header .container .header_humb {
     display: flex;
+  }
+  .header .wrapper_header .open_burger_menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 332px;
+    height: 570px;
+    background: #000;
+    position: absolute;
+    top: 0;
+    right: -20px;
+    z-index: 3;
+  }
+  .header .wrapper_header .open_burger_menu .open_bur_menu_header {
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+    padding: 31px 20px 37px 0;
+    flex-direction: row;
+    justify-content: end;
+  }
+  .header .wrapper_header .open_burger_menu .open_bur_menu_header .open_burger_your_prof {
+    margin-right: 40px;
+  }
+  .header .wrapper_header .open_burger_menu .open_bur_menu_nav .open_bur_menu_nav_list {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+  .header .wrapper_header .open_burger_menu .open_bur_menu_nav .open_bur_menu_nav_list .list_section {
+    list-style: none;
+  }
+  .header .wrapper_header .open_burger_menu .open_bur_menu_nav .open_bur_menu_nav_list .list_section .name_listSection {
+    color: #FFF;
+    font-family: Inter, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 50px;
+  }
+  .header .wrapper_header .open_burger_menu .open_bur_menu_nav .open_bur_menu_nav_list .list_section .name_listSection:hover {
+    color: #8E8E8E;
+    transition: 0.8s;
+    font-weight: 700;
   }
 }
 .about {
