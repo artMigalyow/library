@@ -453,8 +453,14 @@ body .section_title:hover {
     background: #000;
     position: absolute;
     top: 0;
-    right: -100%;
+    right: -20px;
     z-index: 3;
+    transition: 2s;
+    opacity: 0;
+    visibility: hidden;
+    transition-property: opacity, visibility;
+    transition-duration: 0.2s;
+    transition-delay: 0.15s;
   }
   .header .wrapper_header .open_burger_menu .open_bur_menu_header {
     box-sizing: border-box;
@@ -491,8 +497,8 @@ body .section_title:hover {
     font-weight: 700;
   }
   .header .wrapper_header .openbur {
-    right: -20px;
-    animation-duration: 2s;
+    opacity: 1;
+    visibility: visible;
   }
 }
 .about {
