@@ -367,7 +367,7 @@ body .section_title:hover {
   letter-spacing: 0.6px;
 }
 .header .wrapper_header a .nameLib:hover {
-  color: #8E8E8E;
+  color: #BB945F;
   transition: 0.8s;
 }
 .header .wrapper_header .container {
@@ -400,9 +400,8 @@ body .section_title:hover {
   line-height: 50px;
 }
 .header .wrapper_header .container .navigation .nav_list .list_section .name_listSection:hover {
-  color: #8E8E8E;
+  color: #BB945F;
   transition: 0.8s;
-  font-weight: 700;
 }
 .header .wrapper_header .container .your_prof .icon_prof {
   background: #000;
@@ -492,9 +491,8 @@ body .section_title:hover {
     line-height: 50px;
   }
   .header .wrapper_header .open_burger_menu .open_bur_menu_nav .open_bur_menu_nav_list .list_section .name_listSection:hover {
-    color: #8E8E8E;
+    color: #BB945F;
     transition: 0.8s;
-    font-weight: 700;
   }
   .header .wrapper_header .openbur {
     opacity: 1;
