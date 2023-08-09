@@ -1,16 +1,16 @@
 .header {
     width: 100%;
 
-    background: #0C0C0E;
+    background: #0c0c0e;
     .wrapper_header {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        a{
+        a {
             text-decoration: none;
             .nameLib {
-                color: #FFF;
+                color: #fff;
                 font-family: Forum;
                 font-size: 30px;
                 font-style: normal;
@@ -19,7 +19,7 @@
                 letter-spacing: 0.6px;
             }
             .nameLib:hover {
-                color: #BB945F;
+                color: #8e8e8e;
                 transition: 0.8s;
             }
         }
@@ -33,7 +33,7 @@
             width: 100%;
             .navigation {
                 width: 584px;
-                .nav_list{
+                .nav_list {
                     display: flex;
                     flex-direction: row;
                     justify-content: space-between;
@@ -41,7 +41,7 @@
                     .list_section {
                         list-style: none;
                         .name_listSection {
-                            color: #FFF;
+                            color: #fff;
                             font-family: Inter, sans-serif;
                             font-size: 20px;
                             font-style: normal;
@@ -49,31 +49,28 @@
                             line-height: 50px;
                         }
                         .name_listSection:hover {
-                            color: #BB945F;
+                            color: #bb945f;
                             transition: 0.8s;
-
-
                         }
                     }
                 }
-
             }
             .your_prof {
                 .icon_prof {
                     background: #000;
                 }
             }
-            .header_humb{
+            .header_humb {
                 width: 45px;
                 height: 20px;
 
                 display: none;
                 flex-direction: column;
                 justify-content: space-between;
-                .humb_line{
+                .humb_line {
                     width: 45px;
                     height: 2px;
-                    background: #FFF;
+                    background: #fff;
                 }
                 .header_humb_open {
                     display: none;
@@ -85,24 +82,21 @@
         }
     }
 }
-@media (max-width: 1024px) and (min-width: 768px ) {
-    .header{
-        background-color: #0C0C0E;
-        .wrapper_header{
+@media (max-width: 1024px) and (min-width: 768px) {
+    .header {
+        background-color: #0c0c0e;
+        .wrapper_header {
             position: relative;
-            .container{
+            .container {
                 display: flex;
                 max-width: 113px;
                 width: 100%;
                 .navigation {
                     display: none;
-
                 }
-                .header_humb{
+                .header_humb {
                     display: flex;
                 }
-
-
             }
             .open_burger_menu {
                 display: flex;
@@ -112,7 +106,7 @@
                 height: 570px;
                 background: #000;
                 position: absolute;
-                top:0;
+                top: 0;
                 right: -20px;
                 z-index: 3;
                 transition: 2s;
@@ -133,8 +127,8 @@
                         margin-right: 40px;
                     }
                 }
-                .open_bur_menu_nav{
-                    .open_bur_menu_nav_list{
+                .open_bur_menu_nav {
+                    .open_bur_menu_nav_list {
                         display: inline-flex;
                         flex-direction: column;
                         justify-content: center;
@@ -143,7 +137,7 @@
                         .list_section {
                             list-style: none;
                             .name_listSection {
-                                color: #FFF;
+                                color: #fff;
                                 font-family: Inter, sans-serif;
                                 font-size: 20px;
                                 font-style: normal;
@@ -151,10 +145,9 @@
                                 line-height: 50px;
                             }
                             .name_listSection:hover {
-                                color: #BB945F;
+                                color: #bb945f;
                                 transition: 0.8s;
-                                
-
+                                font-weight: 700;
                             }
                         }
                     }
@@ -163,8 +156,6 @@
             .openbur {
                 opacity: 1;
                 visibility: visible;
-
-
             }
         }
     }
