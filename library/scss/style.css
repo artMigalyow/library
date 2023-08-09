@@ -346,7 +346,7 @@ body .section_title:hover {
 }
 .header {
   width: 100%;
-  background: #0C0C0E;
+  background: #0c0c0e;
 }
 .header .wrapper_header {
   display: flex;
@@ -358,7 +358,7 @@ body .section_title:hover {
   text-decoration: none;
 }
 .header .wrapper_header a .nameLib {
-  color: #FFF;
+  color: #fff;
   font-family: Forum;
   font-size: 30px;
   font-style: normal;
@@ -367,7 +367,7 @@ body .section_title:hover {
   letter-spacing: 0.6px;
 }
 .header .wrapper_header a .nameLib:hover {
-  color: #8E8E8E;
+  color: #8e8e8e;
   transition: 0.8s;
 }
 .header .wrapper_header .container {
@@ -392,7 +392,7 @@ body .section_title:hover {
   list-style: none;
 }
 .header .wrapper_header .container .navigation .nav_list .list_section .name_listSection {
-  color: #FFF;
+  color: #fff;
   font-family: Inter, sans-serif;
   font-size: 20px;
   font-style: normal;
@@ -400,9 +400,8 @@ body .section_title:hover {
   line-height: 50px;
 }
 .header .wrapper_header .container .navigation .nav_list .list_section .name_listSection:hover {
-  color: #8E8E8E;
+  color: #bb945f;
   transition: 0.8s;
-  font-weight: 700;
 }
 .header .wrapper_header .container .your_prof .icon_prof {
   background: #000;
@@ -417,7 +416,7 @@ body .section_title:hover {
 .header .wrapper_header .container .header_humb .humb_line {
   width: 45px;
   height: 2px;
-  background: #FFF;
+  background: #fff;
 }
 .header .wrapper_header .container .header_humb .header_humb_open {
   display: none;
@@ -428,7 +427,7 @@ body .section_title:hover {
 
 @media (max-width: 1024px) and (min-width: 768px) {
   .header {
-    background-color: #0C0C0E;
+    background-color: #0c0c0e;
   }
   .header .wrapper_header {
     position: relative;
@@ -453,8 +452,14 @@ body .section_title:hover {
     background: #000;
     position: absolute;
     top: 0;
-    right: -100%;
+    right: -20px;
     z-index: 3;
+    transition: 2s;
+    opacity: 0;
+    visibility: hidden;
+    transition-property: opacity, visibility;
+    transition-duration: 0.2s;
+    transition-delay: 0.15s;
   }
   .header .wrapper_header .open_burger_menu .open_bur_menu_header {
     box-sizing: border-box;
@@ -478,7 +483,7 @@ body .section_title:hover {
     list-style: none;
   }
   .header .wrapper_header .open_burger_menu .open_bur_menu_nav .open_bur_menu_nav_list .list_section .name_listSection {
-    color: #FFF;
+    color: #fff;
     font-family: Inter, sans-serif;
     font-size: 20px;
     font-style: normal;
@@ -486,13 +491,13 @@ body .section_title:hover {
     line-height: 50px;
   }
   .header .wrapper_header .open_burger_menu .open_bur_menu_nav .open_bur_menu_nav_list .list_section .name_listSection:hover {
-    color: #8E8E8E;
+    color: #bb945f;
     transition: 0.8s;
     font-weight: 700;
   }
   .header .wrapper_header .openbur {
-    right: -20px;
-    animation-duration: 2s;
+    opacity: 1;
+    visibility: visible;
   }
 }
 .about {

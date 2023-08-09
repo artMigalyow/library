@@ -6,12 +6,16 @@ const burgerBtn = document.querySelector('.header_humb');
 const burgerClose = document.querySelector('.open_burger_open');
 
 burgerBtn.addEventListener('click',handleclick);
-function handleclick (event) {
-    console.log (burgerOpen.classList);
+function handleclick (even) {
     burgerOpen.classList.toggle('openbur');
+
+    return
 }
 burgerClose.addEventListener('click', removeclick);
-function removeclick(event) {
+function removeclick(even) {
     burgerOpen.classList.toggle('openbur');
-}
 
+    return
+
+
+}
