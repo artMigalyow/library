@@ -1,21 +1,22 @@
 console.log('Вёрстка валидная +10\nВёрстка семантическая +16\nВёрстка соответствует макету +54\nОбщие требования к верстке +20\n')
 
 
-const burgerOpen = document.querySelector('.open_burger_menu');
-const burgerBtn = document.querySelector('.header_humb');
-const burgerClose = document.querySelector('.open_burger_open');
+const menuList = document.querySelector('.navigation');
+const burgerBtn = document.querySelector('.burger_menu');
 
-burgerBtn.addEventListener('click',handleclick);
-function handleclick (even) {
-    burgerOpen.classList.toggle('openbur');
+// burgerBtn.addEventListener('click', () => burgerBtn.classList.toggle('burger_menu_click'));
 
-    return
+
+burgerBtn.addEventListener('click', wihtClick);
+function wihtClick(even) {
+    burgerBtn.classList.toggle('burger_menu_click');
+
+    // menuList.classList.toggle('open_menu');
+    addStyle(menuList);
+    console.log(menuList.style.display)
+    return even;
 }
-burgerClose.addEventListener('click', removeclick);
-function removeclick(even) {
-    burgerOpen.classList.toggle('openbur');
-
-    return
-
-
+function addStyle (element) {
+    element.display == 'none'? element.style.display = 'flex': element.style.display = 'none';
+    return element;
 }
