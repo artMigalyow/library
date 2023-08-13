@@ -11,12 +11,15 @@ burgerBtn.addEventListener('click', wihtClick);
 function wihtClick(even) {
     burgerBtn.classList.toggle('burger_menu_click');
 
-    // menuList.classList.toggle('open_menu');
+    // menuList.classList.toggle('open__menu');
     addStyle(menuList);
+    visibleElem(menuList);
     console.log(menuList.style.display)
     return even;
 }
 function addStyle (element) {
-    element.display == 'none'? element.style.display = 'flex': element.style.display = 'none';
+    // element.style.display == 'flex'? element.style.display = 'none': element.style.display = 'flex';
+    element.style.opacity == 1 ? element.style.opacity = 0 : element.style.opacity = 1;
     return element;
 }
+

@@ -75,7 +75,9 @@
             top: 90px;
             right: 0;
             z-index: 3;
-
+            transition: .9s ease-in-out;
+            opacity: 0;
+            visibility: visible;
 
             .nav_list {
                 flex-direction: column;
@@ -130,9 +132,7 @@
 
 
 // BURGER CLICK TO JS //
-            .open_menu {
-                display: none !important;
-            }
+
             .burger_menu_click {
                 display: block;
                 width: 45px;
