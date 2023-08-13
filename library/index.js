@@ -13,10 +13,13 @@ function wihtClick(even) {
 
     // menuList.classList.toggle('open__menu');
     addStyle(menuList);
+    visibleElem(menuList);
     console.log(menuList.style.display)
     return even;
 }
 function addStyle (element) {
-    element.style.display == 'flex'? element.style.display = 'none': element.style.display = 'flex';
+    // element.style.display == 'flex'? element.style.display = 'none': element.style.display = 'flex';
+    element.style.opacity == 1 ? element.style.opacity = 0 : element.style.opacity = 1;
     return element;
 }
+

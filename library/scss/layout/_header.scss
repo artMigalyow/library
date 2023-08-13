@@ -65,7 +65,7 @@
         background: #000000;
         position: relative;
         .navigation {
-            display: none;
+            display: flex;
             align-items: flex-start;
             justify-content: center;
             position: absolute;
@@ -75,7 +75,9 @@
             top: 90px;
             right: 0;
             z-index: 3;
-            transition: display 1.9s ease-in-out;
+            transition: .9s ease-in-out;
+            opacity: 0;
+            visibility: visible;
 
             .nav_list {
                 flex-direction: column;
