@@ -413,7 +413,7 @@ body .section_title:hover {
     position: relative;
   }
   .header .navigation {
-    display: flex;
+    display: none;
     align-items: flex-start;
     justify-content: center;
     position: absolute;
@@ -423,6 +423,7 @@ body .section_title:hover {
     top: 90px;
     right: 0;
     z-index: 3;
+    transition: display 1.9s ease-in-out;
   }
   .header .navigation .nav_list {
     flex-direction: column;
@@ -467,9 +468,6 @@ body .section_title:hover {
   }
   .header .header_container .burger_menu::after {
     bottom: 0;
-  }
-  .header .header_container .open_menu {
-    display: none !important;
   }
   .header .header_container .burger_menu_click {
     display: block;
