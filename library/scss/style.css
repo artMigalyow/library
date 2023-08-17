@@ -551,6 +551,33 @@ body .section_title:hover {
 .about .wrapper .about_carusel .arrow {
   display: none;
 }
+.about .wrapper .about_carusel .caruselAbout {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+.about .wrapper .about_carusel .caruselAbout .sliderAbout1 .about_img1 {
+  width: 100%;
+  max-width: 450px;
+}
+.about .wrapper .about_carusel .caruselAbout .sliderAbout2 .about_img1 {
+  width: 100%;
+  max-width: 450px;
+}
+.about .wrapper .about_carusel .caruselAbout .sliderAbout3 .about_img1 {
+  width: 100%;
+  max-width: 450px;
+}
+.about .wrapper .about_carusel .caruselAbout .sliderAbout1,
+.about .wrapper .about_carusel .caruselAbout .sliderAbout2,
+.about .wrapper .about_carusel .caruselAbout .sliderAbout3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 1400px;
+  width: 100%;
+}
 .about .wrapper .about_carusel .about_img1 {
   width: 100%;
   max-width: 450px;
