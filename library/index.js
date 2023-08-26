@@ -1,12 +1,15 @@
 console.log('Вёрстка валидная +10\nВёрстка семантическая +16\nВёрстка соответствует макету +54\nОбщие требования к верстке +20\n')
 
-
+const menuList = document.querySelector('.navigation');
 const burgerOpen = document.querySelector('.open_burger_menu');
-const burgerBtn = document.querySelector('.header_humb');
+const burgerBtn = document.querySelector('.burger_menu');
 const burgerClose = document.querySelector('.open_burger_open');
 const wrapSlider = document.querySelector('.caruselAbout');
 const PAGIN = document.querySelectorAll('.pagination');
 const CARUSPAGIN = document.querySelector('.carusel_pagination');
+const FORM_BTN = document.querySelector('.favForms');
+const RADIO_BTN = document.querySelectorAll('.name_radiobtn');
+const FAV_BOOK = document.querySelectorAll('.present_book');
 
 
 
@@ -15,15 +18,24 @@ const CARUSPAGIN = document.querySelector('.carusel_pagination');
 
 
 
-burgerBtn.addEventListener('click',handleclick);
-function handleclick (event) {
-    // console.log (burgerOpen.classList);
-    burgerOpen.classList.toggle('openbur');
+burgerBtn.addEventListener('click', wihtClick);
+function wihtClick(even) {
+    burgerBtn.classList.toggle('burger_menu_click');
+
+    // menuList.classList.toggle('open__menu');
+    addStyle(menuList);
+    visibleElem(menuList);
+    console.log(menuList.style.display)
+    return even;
 }
-burgerClose.addEventListener('click', removeclick);
-function removeclick(event) {
-    burgerOpen.classList.toggle('openbur');
+function addStyle (element) {
+    // element.style.display == 'flex'? element.style.display = 'none': element.style.display = 'flex';
+    element.style.opacity == 1 ? element.style.opacity = 0 : element.style.opacity = 1;
+    return element;
 }
+
+
+
 // carusel-about-tap
 CARUSPAGIN.addEventListener('click', clickPag);
 function clickPag(event) {
@@ -43,4 +55,17 @@ function clickPag(event) {
 
     }
     return;
+}
+//FORM FOR BTN SESIONS TI FAVORITES
+FORM_BTN.addEventListener('click', clickForm);
+function clickForm(elem) {
+    if (elem.target === RADIO_BTN[0]) {
+        for ( let i = 0; i in FAV_BOOK; i++) {
+            if( i <= 4) {
+                FAV_BOOK[i].style.display = 'none'
+            } else {
+                FAV_BOOK.classList.toggle('dispNone')
+            }
+        }
+    }
 }
