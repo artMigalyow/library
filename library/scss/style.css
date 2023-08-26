@@ -559,13 +559,36 @@ body .section_title:hover {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  position: relative;
+  height: 560px;
+  overflow: hidden;
 }
 .about .wrapper .about_carusel .arrow {
   display: none;
 }
-.about .wrapper .about_carusel .about_img1 {
-  width: 100%;
-  max-width: 450px;
+.about .wrapper .about_carusel .caruselAbout {
+  position: absolute;
+  left: -950px;
+  height: inherit;
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+}
+.about .wrapper .about_carusel .caruselAbout .slideImage__block {
+  width: inherit;
+  height: inherit;
+}
+.about .wrapper .about_carusel .moveLeftOneCard {
+  left: -1425px;
+  transition: 0.5s ease-out;
+}
+.about .wrapper .about_carusel .moveLeftTwoCard {
+  left: -1900px;
+  transition: 0.5s ease-out;
+}
+.about .wrapper .about_carusel .about_slideLeft {
+  left: 0px;
+  transition: 0.5s ease-out;
 }
 .about .wrapper .carusel_pagination {
   max-width: 68px;
@@ -583,10 +606,6 @@ body .section_title:hover {
   border: none;
   transition: 0.8s;
   position: relative;
-}
-.about .wrapper .carusel_pagination .pagination:hover {
-  background: #BB945F;
-  border: none;
 }
 .about .wrapper .carusel_pagination .pagination::after {
   content: "";
