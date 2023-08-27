@@ -135,18 +135,30 @@
                 }
             }
             .about_carusel{
-                max-width: 568px;
+                max-width: 614px;
                 align-items: center;
                 .arrow {
                     display: inline;
-                    background: #FFF;
                     border: none;
-                    width: 28px;
-                    height: 23px
+                    width: 24px;
+                    height: 24px;
+                    padding: 0;
+                    background-color: #FFF;
                 }
-                #about_carusel_img2, #about_carusel_img3 {
-                    display: none;
+                .arr_left {
+                    background-image: url('/assets/svg/Arrow_Left.svg');
                 }
+                .arr_right {
+                    background-image: url('/assets/svg/Arrow\ right.svg');
+                }
+                .caruselAbout {
+                    width: 450px;
+                    height: 560px;
+                    left: -982px;
+                    gap: 82px   ;
+                    transition-duration: 1s;
+                }
+
             }
             .carusel_pagination {
                 max-width: 120px;
