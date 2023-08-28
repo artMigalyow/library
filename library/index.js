@@ -92,47 +92,48 @@ function toRight(str) {
     str = str.replaceAll('px','');
     return  `${Number(str)-532}px`;
 }
-wrapSlider.style.left = '-982px';
-let posSlide = wrapSlider.style.left;
-// let countclick = 0;
+let posSlide = window.getComputedStyle(wrapSlider);
+let countClick = 0;
+
+let posCard = ['-982px', '-1514px', '-2046px', '-2578px','-3110px'];
+let stackPosCard = ['-982px']
 
 BLOCK_CARUSEL.addEventListener('click', clickArrow);
 function clickArrow(event) {
-    if (posSlide === '-982px') {
-        ARROW_BTN[0].setAttribute('disabled','disabled');
-        if (event.target === ARROW_BTN[0]) {
-            
-            }else if (posSlide != '-982px'){
-                ARROW_BTN[0].removeAttribute('disabled');
-                wrapSlider.style.left = toLeft(posSlide);
-                posSlide = wrapSlider.style.left;
-                // console.log(++countclick);
-            }
 
+    if ( event.target === ARROW_BTN[0] ) {
+        if (posSlide.left === '-982px') {
 
-        }else if (event.target === ARROW_BTN[1]) {
-            if (posSlide === '-3110px') {
-                ARROW_BTN[1].setAttribute('disabled','disabled')
-            }else if (posSlide != '-3110px') {
-                ARROW_BTN[1].removeAttribute('disabled');
-                wrapSlider.style.left = toRight(posSlide);
-                posSlide = wrapSlider.style.left;
+            ARROW_BTN[0].setAttribute('disabled', 'disabled');
+            ARROW_BTN[1].removeAttribute('disabled', 'disabled');
 
-            }
+        }else {
+
+            ARROW_BTN.forEach((elem) => {elem.removeAttribute('disabled')})
+
+            PAGIN.forEach((elem) => {elem.style.background = '#0C0C0E'});
+            PAGIN[--countClick].style.background = '#BB945F';
+            stackPosCard.pop(posCard[countClick])
+            wrapSlider.style.left = stackPosCard[stackPosCard.length-1]
+
         }
+    }
+    if (event.target === ARROW_BTN[1]) {
+        if (posSlide.left === '-3110px'){
+            ARROW_BTN[1].setAttribute('disabled', 'disabled');
 
-}
 
-//FORM FOR BTN SESIONS TI FAVORITES
-FORM_BTN.addEventListener('click', clickForm);
-function clickForm(elem) {
-    if (elem.target === RADIO_BTN[0]) {
-        for ( let i = 0; i in FAV_BOOK; i++) {
-            if( i <= 4) {
-                FAV_BOOK[i].style.display = 'none'
-            } else {
-                FAV_BOOK.classList.toggle('dispNone')
-            }
+        }else {
+
+            ARROW_BTN.forEach((elem) => {elem.removeAttribute('disabled')})
+            PAGIN.forEach((elem) => {elem.style.background = '#0C0C0E'});
+            PAGIN[++countClick].style.background = '#BB945F';
+
+            stackPosCard.push(posCard[countClick]);
+            wrapSlider.style.left = stackPosCard[stackPosCard.length-1];
+
+
         }
     }
 }
+
