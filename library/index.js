@@ -7,15 +7,13 @@ const burgerClose = document.querySelector('.open_burger_open');
 const wrapSlider = document.querySelector('.caruselAbout');
 const PAGIN = document.querySelectorAll('.pagination');
 const CARUSPAGIN = document.querySelector('.carusel_pagination');
-const FORM_BTN = document.querySelector('.favForms');
 const RADIO_BTN = document.querySelectorAll('.name_radiobtn');
-const FAV_BOOK = document.querySelectorAll('.present_book');
 const ARROW_BTN = document.querySelectorAll(".arrow");
 const BLOCK_CARUSEL = document.querySelector('.about_carusel');
 
 
 
-
+// Карусель в виде слайдера в блоке About с фиксированным началом и концом: На большом экране будет доступно 3 перехода. При нажатии на кнопку, происходит плавное замещение одной картинки другой (слепок. Переход из крайнего левого состояния в крайнее правое происходит только через перелистывание всех элементов посередине, и в обратную сторону. Тоже касается и ширины экранов для планшетов, только теперь кнопок будет 5. А в крайних положениях, стрелки соответствующей стороны будут становиться неактивными.
 
 // FOR TABLET media 768px
 const tablet = window.matchMedia('(max-width: 1024px) and (min-width: 768px)');
@@ -84,14 +82,7 @@ function clickPag(event) {
     return;
 }
 //ARROW CLICK
-function toLeft(str) {
-    str = str.replaceAll('px','');
-    return  `${Number(str)+532}px`;
-}
-function toRight(str) {
-    str = str.replaceAll('px','');
-    return  `${Number(str)-532}px`;
-}
+
 let posSlide = window.getComputedStyle(wrapSlider);
 let countClick = 0;
 
@@ -135,5 +126,45 @@ function clickArrow(event) {
 
         }
     }
+    return event;
 }
+
+
+// 'Слайдер" в виде затемнения/проявления (fade in / fade out) в блоке Favorites: все 4 карточки с книгами будут плавно затухать, а затем плавно появляться следующие. Анимация может быть прервана следующим нажатием на кнопку выбора поры года. Также допускается реализация данного пункта табами.
+//FAVORITES
+const INPUT_SEASON = document.querySelectorAll('.real_radiobtn');
+const BOOKS = document.querySelectorAll('.present_book');
+const FORM_BTN = document.querySelector('.favForms');
+const inptBtn = document.querySelectorAll('.real_radiobtn')
+
+const  winter = []
+const  spring = []
+const  summer = []
+const  autumn = []
+BOOKS.forEach ( function (elem,index){
+    if (index <=3) {
+        winter.push(elem)
+    } else if (index > 3 && index<=7) {
+        spring.push(elem)
+
+    } else if (index > 7 && index<=11) {
+        summer.push(elem)
+
+    }else if (index > 11 && index<=15) {
+        autumn.push(elem)
+    }
+})
+
+
+let bookStyle = document.querySelector('.present_book')
+INPUT_SEASON.forEach(input => input.addEventListener('change', (elem) => {
+    if (elem.target === INPUT_SEASON[0]){
+        winter.forEach(elem => {elem.style.display = 'none'})
+    }
+}))
+
+
+                                                 //EVENTS//
+
+
 
