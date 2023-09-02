@@ -159,7 +159,56 @@ BOOKS.forEach ( function (elem,index){
 let bookStyle = document.querySelector('.present_book')
 INPUT_SEASON.forEach(input => input.addEventListener('change', (elem) => {
     if (elem.target === INPUT_SEASON[0]){
-        winter.forEach(elem => {elem.style.display = 'none'})
+        BOOKS.forEach(elem => {
+            elem.style.animation = 'fadeOut 5s';
+            elem.style.display = 'none';
+
+        })
+        winter.forEach(elem => {
+            elem.style.animation = 'fadeIn 4s';
+            elem.style.display = 'flex';
+            elem.style.opacity = '1';
+            elem.style.visibility = 'visible';
+        })
+
+    }else if (elem.target===INPUT_SEASON[1]){
+        BOOKS.forEach(elem => {
+            elem.style.animation = 'fadeOut 5s';
+            elem.style.display = 'none';
+
+        })
+        spring.forEach(elem => {
+            elem.style.animation = 'fadeIn 4s';
+            elem.style.display = 'flex';
+            elem.style.opacity = '1';
+            elem.style.visibility = 'visible';
+        })
+    }else if (elem.target===INPUT_SEASON[2]){
+        BOOKS.forEach(elem => {
+            elem.style.animation = 'fadeOut 5s';
+            elem.style.display = 'none';
+
+        })
+        summer.forEach(elem => {
+            elem.style.animation = 'fadeIn 4s';
+            elem.style.display = 'flex';
+            elem.style.opacity = '1';
+            elem.style.visibility = 'visible';
+
+        })
+    }else if (elem.target===INPUT_SEASON[3]) {
+        BOOKS.forEach(elem => {
+            elem.style.animation = 'fadeOut 5s';
+            elem.style.display = 'none';
+
+        })
+        autumn.forEach(elem => {
+            console.log('yes')
+            elem.style.animation = 'fadeIn 4s';
+            elem.style.display = 'flex';
+            elem.style.opacity = '1';
+            elem.style.visibility = 'visible';
+        })
     }
 }))
 

@@ -797,6 +797,9 @@ body .section_title:hover {
   background: #FFF;
   padding-left: 20px;
   position: relative;
+  opacity: 1;
+  visibility: visible;
+  display: flex;
 }
 .favorites .wrapper .grid .present_book .bg-description {
   margin-bottom: 15px;
@@ -902,6 +905,32 @@ body .section_title:hover {
 }
 .favorites .wrapper .grid #book5, .favorites .wrapper .grid #book6, .favorites .wrapper .grid #book7, .favorites .wrapper .grid #book8, .favorites .wrapper .grid #book9, .favorites .wrapper .grid #book10, .favorites .wrapper .grid #book11, .favorites .wrapper .grid #book12, .favorites .wrapper .grid #book13, .favorites .wrapper .grid #book14, .favorites .wrapper .grid #book15, .favorites .wrapper .grid #book16 {
   display: none;
+  opacity: 0;
+  visibility: hidden;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+    display: flex;
+  }
+}
+@keyframes fadeOut {
+  100% {
+    opacity: 1;
+    visibility: visible;
+    display: flex;
+  }
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+  }
 }
 
 @media (max-width: 1024px) and (min-width: 768px) {

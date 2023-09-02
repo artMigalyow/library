@@ -100,6 +100,10 @@
                 background: #FFF;
                 padding-left: 20px;
                 position: relative;
+                opacity: 1;
+                visibility: visible;
+                display: flex;
+
 
                 .bg-description {
                     margin-bottom: 15px;
@@ -209,8 +213,36 @@
                     letter-spacing: 1px;
                 }
             }
+
             #book5,#book6,#book7,#book8,#book9,#book10,#book11,#book12,#book13,#book14,#book15,#book16 {
                 display: none;
+                opacity: 0;
+                visibility: hidden;
+
+            }
+            @keyframes fadeIn{
+                0%{
+                    opacity: 0;
+                    visibility: hidden;
+                    display: none;
+                }
+                100%{
+                    opacity: 1;
+                    visibility: visible;
+                    display: flex;
+                }
+            }
+            @keyframes fadeOut {
+                100%{
+                    opacity: 1;
+                    visibility: visible;
+                    display: flex;
+                }
+                0%{
+                    opacity: 0;
+                    visibility: hidden;
+                    display: none;
+                }
             }
         }
     }
