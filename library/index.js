@@ -210,10 +210,39 @@ INPUT_SEASON.forEach(input => input.addEventListener('change', (elem) => {
             elem.style.visibility = 'visible';
         })
     }
-}))
+}));
 
 
-                                                 //EVENTS//
+                     // USER POSSITION TO REGISTER//
+
+const BTN_PROF = document.querySelector('.prof');
+const MODAL = document.querySelector('.modal');
+const dropProf = document.querySelector('.drop_menuProf');
+const spanDrop = dropProf.getElementsByTagName('span');
+const winReg = document.querySelector('.modal_reg');
+const winLog = document.querySelector('.modal_lg')
+const btnClsModal = document.querySelectorAll('.btn_close');
+
+BTN_PROF.addEventListener('click', (event) => {
+    dropProf.classList.toggle('leaveDrop');
+})
+dropProf.addEventListener('click', (span) => {
+    if (span.target === spanDrop[2]) {
+        dropProf.classList.toggle('leaveDrop');
+        MODAL.style.display = 'flex';
+        winReg.style.display = 'flex';
+    } else if (span.target === spanDrop[1]) {
+        dropProf.classList.toggle('leaveDrop');
+        MODAL.style.display = 'flex';
+        winLog.style.display = 'flex';
+
+
+    }
+})
+btnClsModal.forEach(btnCls => btnCls.addEventListener('click', ClsModal));
+function ClsModal(elem) {
+    return MODAL.style.display = 'none';
+};
 
 
 

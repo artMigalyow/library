@@ -1,0 +1,224 @@
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    width: inherit;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+
+
+    .modal_lg {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 250px;
+        height: 262px;
+        background: #FFF;
+        border: none;
+        top: 90px;
+
+        // position: relative;
+        .btn_close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            cursor: pointer;
+        }
+        .modalLg__content {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            top: 20px;
+            .modal_title {
+                text-align: center;
+                color: #000;
+                text-align: center;
+                font-family: Forum;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 20px; /* 100% */
+                letter-spacing: 0.4px;
+                text-transform: uppercase;
+                margin-bottom: 20px;
+
+            }
+            .modal_lgForm {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                width: 200px;
+                height: 160px;
+                flex-shrink: 0;
+                label {
+                    color: #000;
+                    text-align: center;
+                    font-family: Inter;
+                    font-size: 15px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 20px; /* 133.333% */
+                    letter-spacing: 0.3px;
+                }
+                input {
+                    width: 200px;
+                    height: 20px;
+                    flex-shrink: 0;
+                    border: 1px solid #BB945F;
+                    margin-top: 10px;
+                }
+                #lg_btnSub {
+                    width: 75px;
+                    height: 30px;
+                    flex-shrink: 0;
+                    border-radius: 2px;
+                    border: 1px solid #0C0C0E;
+                    background: #FFF;
+                    color: #0C0C0E;
+                    text-align: center;
+                    font-family: Inter;
+                    font-size: 10px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                    letter-spacing: 1px;
+                    cursor: pointer;
+                    margin-top: 20px;
+                }
+
+
+            }
+            .modal_lgText {
+                margin: 10px, 0, 20px, 0;
+
+                .lgText {
+                    color: #000;
+                    text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.16);
+                    font-family: Inter;
+                    font-size: 10px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    margin-right: 10px;
+                }
+                .reg_link {
+                    text-decoration: none;
+                    color: #0C0C0E;
+                    text-align: center;
+                    font-family: Inter;
+                    font-size: 10px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                    letter-spacing: 1px;
+                    text-decoration-line: underline;
+                }
+            }
+        }
+
+    }
+    .modal_reg {
+        display: none;
+        width: 250px;
+        height: 382px;
+        flex-direction: column;
+        align-items: center;
+        background: #FFF;
+        border: none;
+        top: 90px;
+        .btn_close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            cursor: pointer;
+        }
+        .modalReg_content {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            top: 20px;
+            .modal_title {
+                text-align: center;
+                color: #000;
+                text-align: center;
+                font-family: Forum;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 20px; /* 100% */
+                letter-spacing: 0.4px;
+                text-transform: uppercase;
+                margin-bottom: 20px;
+
+            }
+            .modalReg_form {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                width: 200px;
+                height: 280px;
+                label {
+                    color: #000;
+                    text-align: center;
+                    font-family: Inter;
+                    font-size: 15px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 20px; /* 133.333% */
+                    letter-spacing: 0.3px;
+                }
+                input {
+                    width: 200px;
+                    height: 20px;
+                    flex-shrink: 0;
+                    border: 1px solid #BB945F;
+                    margin-top: 10px;
+                }
+                #reg_btnSub {
+                    width: 75px;
+                    height: 30px;
+                    flex-shrink: 0;
+                    border-radius: 2px;
+                    border: 1px solid #0C0C0E;
+                    background: #FFF;
+                    color: #0C0C0E;
+                    text-align: center;
+                    font-family: Inter;
+                    font-size: 10px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                    letter-spacing: 1px;
+                    cursor: pointer;
+                    margin-top: 20px;
+                }
+            }
+            .modal_regText {
+                margin: 10px, 0, 20px, 0;
+                .reg_text {
+                    color: #000;
+                    text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.16);
+                    font-family: Inter;
+                    font-size: 10px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    margin-right: 10px;
+                }
+                .login_link {
+                    text-decoration: none;
+                    color: #0C0C0E;
+                    text-align: center;
+                    font-family: Inter;
+                    font-size: 10px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                    letter-spacing: 1px;
+                    text-decoration-line: underline;
+                }
+            }
+        }
+    }
+}
