@@ -26,6 +26,16 @@
                 <span class="burger_line"></span>
             </button>
         </div>
+        <div class="drop_menuProf">
+            <span class="prof">Profile</span>
+            <span class="lg">Log In</span>
+            <span class="rg">Register</span>
+        </div>
+        <div class="drop_menuProfAuth">
+            <span class="prof">Profile</span>
+            <span class="mProf">My profile</span>
+            <span class="lg_out">Log Out</span>
+        </div>
     </header>
     <main class="main">
         <section class="welcom">
@@ -426,6 +436,62 @@
             </div>
         </div>
     </footer>
+    <div class="modal">
+        <dialog class="modal_lg">
+            <img src="./assets/svg/close_btn.svg" alt="btnClose" class="btn_close">
+            <div class="modalLg__content">
+                <span class="modal_title">Login</span>
+                <form action="#" method="dialog" class="modal_lgForm">
+                    <div class="formLg_mail">
+                        <label for="email">E-mail or readers card</label>
+                        <input type="email" name="email" id="inpLg_email">
+                    </div>
+                    <div class="formLg_psw">
+                        <label for="psw_lg">Password</label>
+                        <input type="password" name="psw_lg" id="inpLg_psw">
+                    </div>
+                    <div class="formLg_btnSub">
+                        <input type="submit" value="Log In" id="lg_btnSub">
+                    </div>
+                </form>
+                <div class="modal_lgText">
+                    <span class="lgText">Don’t have an account?</span>
+                    <a href="#"class='reg_link'>Register</a>
+                </div>
+            </div>
+        </dialog>
+        <dialog class="modal_reg">
+            <img src="./assets/svg/close_btn.svg" alt="btnClose" class="btn_close">
+            <div class="modalReg_content">
+                <span class="modal_title">Register</span>
+                <form action="#" method="dialog" class="modalReg_form">
+                    <div class="formReg_fn">
+                        <label for="reg_fn">First name</label>
+                        <input type="text" name="reg_fn" id="inpReg_fn">
+                    </div>
+                    <div class="formReg_ln">
+                        <label for="reg_ln">Last name</label>
+                        <input type="text" name="reg_ln" id="inpReg_ln">
+                    </div>
+                    <div class="formReg_mail">
+                        <label for="reg_mail">E-mail</label>
+                        <input type="text" name="reg_mail" id="inpReg_mail">
+                    </div>
+                    <div class="formReg_psw">
+                        <label for="reg_psw">Password</label>
+                        <input type="password" name="reg_psw" id="inpReg_psw">
+                    </div>
+                    <div class="formReg_btnSub">
+                        <input type="submit" value="Sing Up" id="reg_btnSub">
+                    </div>
+                </form>
+                <div class="modal_regText">
+                    <span class="reg_text">Already have an account?</span>
+                    <a href="" class="login_link">Login</a>
+                </div>
+            </div>
+        </dialog>
+    </div>
     <script src="./index.js"></script>
 </body>
 </html>
