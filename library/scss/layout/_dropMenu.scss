@@ -1,0 +1,88 @@
+.drop_menuProf {
+    display: none;
+    width: 80px;
+    height: 115px;
+    background: #FFFFFF;
+    position: absolute;
+    z-index: 3;
+    top: 90px;
+    right: 54px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    .prof {
+        margin-top: 5px;
+        color: #000;
+        font-family: Inter;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 20px; /* 133.333% */
+
+    }
+    .prof::after {
+        content: '';
+        width: 40px;
+        height: 1px;
+        background: #BB945F;
+        display: block;
+        margin: 5px auto 15px auto;
+    }
+    .lg, .rg {
+        font-family: Inter;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+        cursor: pointer;
+    }
+    .lg {
+        margin-bottom: 10px;
+    }
+
+
+}
+.leaveDrop {
+    display: flex;
+    // z-index: 0;
+}
+.drop_menuProfAuth {
+    width: 80px;
+    height: 115px;
+    background: #FFFFFF;
+
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    .prof {
+        margin-top: 5px;
+        color: #000;
+        font-family: Inter;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 20px; /* 133.333% */
+
+    }
+    .prof::after {
+        content: '';
+        width: 40px;
+        height: 1px;
+        background: #BB945F;
+        display: block;
+        margin: 5px auto 15px auto;
+    }
+    .mProf, .lg_out {
+        font-family: Inter;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+    }
+    .mProf {
+        margin-bottom: 10px;
+    }
+
+}

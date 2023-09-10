@@ -403,6 +403,9 @@ body .section_title:hover {
   justify-content: space-between;
   align-items: center;
 }
+.header .header_container .prof {
+  cursor: pointer;
+}
 .header .header_container .burger_menu {
   display: none;
 }
@@ -1494,4 +1497,301 @@ body .section_title:hover {
   .footer .wrapper .footer_rss .year {
     margin: 0;
   }
+}
+.drop_menuProf {
+  display: none;
+  width: 80px;
+  height: 115px;
+  background: #FFFFFF;
+  position: absolute;
+  z-index: 3;
+  top: 90px;
+  right: 54px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.drop_menuProf .prof {
+  margin-top: 5px;
+  color: #000;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px; /* 133.333% */
+}
+.drop_menuProf .prof::after {
+  content: "";
+  width: 40px;
+  height: 1px;
+  background: #BB945F;
+  display: block;
+  margin: 5px auto 15px auto;
+}
+.drop_menuProf .lg, .drop_menuProf .rg {
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  cursor: pointer;
+}
+.drop_menuProf .lg {
+  margin-bottom: 10px;
+}
+
+.leaveDrop {
+  display: flex;
+}
+
+.drop_menuProfAuth {
+  width: 80px;
+  height: 115px;
+  background: #FFFFFF;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.drop_menuProfAuth .prof {
+  margin-top: 5px;
+  color: #000;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px; /* 133.333% */
+}
+.drop_menuProfAuth .prof::after {
+  content: "";
+  width: 40px;
+  height: 1px;
+  background: #BB945F;
+  display: block;
+  margin: 5px auto 15px auto;
+}
+.drop_menuProfAuth .mProf, .drop_menuProfAuth .lg_out {
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+.drop_menuProfAuth .mProf {
+  margin-bottom: 10px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  width: inherit;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+.modal .modal_lg {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+  height: 262px;
+  background: #FFF;
+  border: none;
+  top: 90px;
+}
+.modal .modal_lg .btn_close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+}
+.modal .modal_lg .modalLg__content {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 20px;
+}
+.modal .modal_lg .modalLg__content .modal_title {
+  text-align: center;
+  color: #000;
+  text-align: center;
+  font-family: Forum;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 100% */
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.modal .modal_lg .modalLg__content .modal_lgForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 200px;
+  height: 160px;
+  flex-shrink: 0;
+}
+.modal .modal_lg .modalLg__content .modal_lgForm label {
+  color: #000;
+  text-align: center;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 133.333% */
+  letter-spacing: 0.3px;
+}
+.modal .modal_lg .modalLg__content .modal_lgForm input {
+  width: 200px;
+  height: 20px;
+  flex-shrink: 0;
+  border: 1px solid #BB945F;
+  margin-top: 10px;
+}
+.modal .modal_lg .modalLg__content .modal_lgForm #lg_btnSub {
+  width: 75px;
+  height: 30px;
+  flex-shrink: 0;
+  border-radius: 2px;
+  border: 1px solid #0C0C0E;
+  background: #FFF;
+  color: #0C0C0E;
+  text-align: center;
+  font-family: Inter;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.modal .modal_lg .modalLg__content .modal_lgText {
+  margin: 10px, 0, 20px, 0;
+}
+.modal .modal_lg .modalLg__content .modal_lgText .lgText {
+  color: #000;
+  text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.16);
+  font-family: Inter;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-right: 10px;
+}
+.modal .modal_lg .modalLg__content .modal_lgText .reg_link {
+  text-decoration: none;
+  color: #0C0C0E;
+  text-align: center;
+  font-family: Inter;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-decoration-line: underline;
+}
+.modal .modal_reg {
+  display: none;
+  width: 250px;
+  height: 382px;
+  flex-direction: column;
+  align-items: center;
+  background: #FFF;
+  border: none;
+  top: 90px;
+}
+.modal .modal_reg .btn_close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+}
+.modal .modal_reg .modalReg_content {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 20px;
+}
+.modal .modal_reg .modalReg_content .modal_title {
+  text-align: center;
+  color: #000;
+  text-align: center;
+  font-family: Forum;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 100% */
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.modal .modal_reg .modalReg_content .modalReg_form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 200px;
+  height: 280px;
+}
+.modal .modal_reg .modalReg_content .modalReg_form label {
+  color: #000;
+  text-align: center;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 133.333% */
+  letter-spacing: 0.3px;
+}
+.modal .modal_reg .modalReg_content .modalReg_form input {
+  width: 200px;
+  height: 20px;
+  flex-shrink: 0;
+  border: 1px solid #BB945F;
+  margin-top: 10px;
+}
+.modal .modal_reg .modalReg_content .modalReg_form #reg_btnSub {
+  width: 75px;
+  height: 30px;
+  flex-shrink: 0;
+  border-radius: 2px;
+  border: 1px solid #0C0C0E;
+  background: #FFF;
+  color: #0C0C0E;
+  text-align: center;
+  font-family: Inter;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.modal .modal_reg .modalReg_content .modal_regText {
+  margin: 10px, 0, 20px, 0;
+}
+.modal .modal_reg .modalReg_content .modal_regText .reg_text {
+  color: #000;
+  text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.16);
+  font-family: Inter;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-right: 10px;
+}
+.modal .modal_reg .modalReg_content .modal_regText .login_link {
+  text-decoration: none;
+  color: #0C0C0E;
+  text-align: center;
+  font-family: Inter;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-decoration-line: underline;
 }/*# sourceMappingURL=style.css.map */

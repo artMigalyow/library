@@ -55,6 +55,9 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        .prof {
+            cursor: pointer;
+        }
         .burger_menu {
             display: none;
         }
