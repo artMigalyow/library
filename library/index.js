@@ -26,13 +26,12 @@ function wihtClick(even) {
 
     // menuList.classList.toggle('open__menu');
     addStyle(menuList);
-    visibleElem(menuList);
-    console.log(menuList.style.display)
+    // visibleElem(menuList);
     return even;
 }
 function addStyle (element) {
-    // element.style.display == 'flex'? element.style.display = 'none': element.style.display = 'flex';
     element.style.opacity == 1 ? element.style.opacity = 0 : element.style.opacity = 1;
+    element.style.display == 'flex' ? element.style.display = 'none': element.style.display = 'flex';
     return element;
 }
 
@@ -222,6 +221,22 @@ const spanDrop = dropProf.getElementsByTagName('span');
 const winReg = document.querySelector('.modal_reg');
 const winLog = document.querySelector('.modal_lg')
 const btnClsModal = document.querySelectorAll('.btn_close');
+const getBtn = document.querySelectorAll('.btn_get');
+
+
+// Digital Library Cards //
+getBtn.forEach(elem => elem.addEventListener('click', (event) => {
+    if (event.target === getBtn[0]) {
+        MODAL.children[0].style.display = 'none'
+        MODAL.style.display = 'flex';
+        winReg.style.display = 'flex';
+    }else if (event.target === getBtn[1]) {
+        MODAL.children[1].style.display = 'none'
+        MODAL.style.display = 'flex';
+        winLog.style.display = 'flex';
+
+    }
+}))
 
 BTN_PROF.addEventListener('click', (event) => {
     dropProf.classList.toggle('leaveDrop');
@@ -243,6 +258,9 @@ btnClsModal.forEach(btnCls => btnCls.addEventListener('click', ClsModal));
 function ClsModal(elem) {
     return MODAL.style.display = 'none';
 };
+
+
+//----------Этап 2: Пользователь на этапе регистрации----------//
 
 
 

@@ -1505,8 +1505,8 @@ body .section_title:hover {
   background: #FFFFFF;
   position: absolute;
   z-index: 3;
-  top: 90px;
-  right: 54px;
+  top: 70px;
+  right: 20px;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
@@ -1581,6 +1581,12 @@ body .section_title:hover {
   margin-bottom: 10px;
 }
 
+@media (max-width: 768px) {
+  .drop_menuProf {
+    top: 70px;
+    right: 105px;
+  }
+}
 .modal {
   display: none;
   position: fixed;
