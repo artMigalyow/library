@@ -43,10 +43,9 @@
 
 
 }
-.leaveDrop {
-    display: flex;
-    // z-index: 0;
-}
+
+.leaveDrop {display: flex;}
+
 .drop_menuProfAuth {
     width: 80px;
     height: 115px;
@@ -86,9 +85,9 @@
     }
 
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px)  and (min-width: 538px) {
     .drop_menuProf {
-        top: 70px;
+        top: 90px;
         right: 105px;
     }
 }

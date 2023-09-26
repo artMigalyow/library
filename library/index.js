@@ -16,7 +16,7 @@ const BLOCK_CARUSEL = document.querySelector('.about_carusel');
 // Карусель в виде слайдера в блоке About с фиксированным началом и концом: На большом экране будет доступно 3 перехода. При нажатии на кнопку, происходит плавное замещение одной картинки другой (слепок. Переход из крайнего левого состояния в крайнее правое происходит только через перелистывание всех элементов посередине, и в обратную сторону. Тоже касается и ширины экранов для планшетов, только теперь кнопок будет 5. А в крайних положениях, стрелки соответствующей стороны будут становиться неактивными.
 
 // FOR TABLET media 768px
-const tablet = window.matchMedia('(max-width: 1024px) and (min-width: 768px)');
+
 
 
 
@@ -222,6 +222,8 @@ const winReg = document.querySelector('.modal_reg');
 const winLog = document.querySelector('.modal_lg')
 const btnClsModal = document.querySelectorAll('.btn_close');
 const getBtn = document.querySelectorAll('.btn_get');
+const BODY = document.body;
+const clsHeader = document.querySelector('.header');
 
 
 // Digital Library Cards //
@@ -234,13 +236,20 @@ getBtn.forEach(elem => elem.addEventListener('click', (event) => {
         MODAL.children[1].style.display = 'none'
         MODAL.style.display = 'flex';
         winLog.style.display = 'flex';
-
     }
 }))
 
+
+
 BTN_PROF.addEventListener('click', (event) => {
+    burgerBtn.classList.remove('burger_menu_click');
+    // menuList.style.opacity = 0;
+    // menuList.style.display = 'none';
     dropProf.classList.toggle('leaveDrop');
+
 })
+
+
 dropProf.addEventListener('click', (span) => {
     if (span.target === spanDrop[2]) {
         dropProf.classList.toggle('leaveDrop');
@@ -253,14 +262,40 @@ dropProf.addEventListener('click', (span) => {
 
 
     }
-})
-btnClsModal.forEach(btnCls => btnCls.addEventListener('click', ClsModal));
-function ClsModal(elem) {
-    return MODAL.style.display = 'none';
-};
-
+},true)
 
 //----------Этап 2: Пользователь на этапе регистрации----------//
+    //// ##Меню авторизации при нажатии на иконку пользователя//
+
+
+/// На разрешении 768px, при открытом бургер-меню, оно закрывается и открывается меню авторизации. +2////
+
+const tablet = window.matchMedia('(man-width: 1024px)');
+if (tablet.matches) {
+    btnClsModal.forEach(btnCls => btnCls.addEventListener('click', ClsModal));
+    function ClsModal(elem) {
+        return MODAL.style.display = 'none';
+    };
+    console.log('yes')
+    burgerBtn.addEventListener('click', elem => {
+        dropProf.classList.remove('leaveDrop');
+
+    });
+}
+/// ----Нажатие на любую область или элемент вне меню приводят к закрытию меню авторизации. +2---///
+BODY.addEventListener('click', (elem) => {
+    if(clsHeader.children[3].classList.contains('leaveDrop')) {
+        if ( elem.target !== dropProf) {
+            clsHeader.children[3].classList.toggle('leaveDrop')
+        }
+    }
+    const widthlog = elem.composedPath().includes(winLog);
+    const widthSing = elem.composedPath().includes(winReg);
+    if(!widthlog && !widthSing) {
+        MODAL.style.display = 'none';
+    }
+
+}, true)
 
 
 
