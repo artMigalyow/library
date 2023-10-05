@@ -294,8 +294,92 @@ BODY.addEventListener('click', (elem) => {
     if(!widthlog && !widthSing) {
         MODAL.style.display = 'none';
     }
-
 }, true)
 
 
+/*Модальное окно REGISTER*/
 
+  /* ***При нажатии на крестик в углу окна, или на затемнённую область вне этого окна, оно закрывается. +2****/
+
+btnClsModal.forEach(btnCls => btnCls.addEventListener('click', ClsModal));
+    function ClsModal(elem) {
+        return MODAL.style.display = 'none';
+    };
+    burgerBtn.addEventListener('click', elem => {
+        dropProf.classList.remove('leaveDrop');
+
+});
+/* *** В данном случае, ограничения по полям - все поля должны быть не пустыми. +2*/
+const inputReg = document.querySelectorAll('.regInput')
+const inputLog = document.querySelectorAll('.inputLog')
+
+function setAttribReq(elem,atrib){
+    elem.forEach((el)=>{
+        el.setAttribute(atrib,'')
+    })
+}
+setAttribReq(inputReg,"required");
+setAttribReq(inputLog,"required");
+
+/**Пароль должен быть не короче 8 символов. +2  */
+const inputPasword = document.querySelectorAll('input[type = password]');
+inputPasword.forEach((el)=> {el.minLength = 8})
+
+
+/*          ####Окончание регистрации    */
+/* Данные сохраняются в хранилище localStorage, в том числе и пароль, хотя в реальной жизни так делать нельзя. +2*/
+const formReg = document.querySelector('.modalReg_form');
+const SING_UP_BTN = document.getElementById('reg_btnSub');
+
+// class UserNew{
+//     firstName;
+//     lastName;
+//     email;
+//     password;
+//     constructor (userFname,userLname, userEemail,userPswr){
+//         this.firstName = userFname;
+//         this.lastName = userLname;
+//         this.email = userEemail;
+//         this.password = userPswr;
+//     }
+
+// }
+function createUs(userFname,userLname, userEemail,userPswr){
+    return {
+        firstName : userFname,
+        lastName : userLname,
+        email : userEemail,
+        password : userPswr
+    }
+
+}
+const localUser = []
+
+formReg.addEventListener('submit', function() {
+    let userNew = createUs(inputReg[0].value,inputReg[1].value,inputReg[2].value,inputReg[3].value);
+    localUser.push(userNew)
+
+    return localStorage.localUser = JSON.stringify(localUser);
+});
+
+
+/*Иконка пользователя меняется на заглавные буквы имени.*/
+const users = JSON.parse(localStorage.localUser)
+const blockProf = document.querySelector('.prof')
+console.log(users[0].firstName[0]);
+const userIcon = document.createElement('span');
+function creatName(user){
+    let name =[];
+    name.push(user.firstName[0])
+    name.push(user.lastName[0])
+    return name.join('')
+
+}
+console.log(creatName(users[0]))
+console.log(userIcon)
+userIcon.innerHTML = creatName(users[0]);
+userIcon.classList.add('styleUser_name')
+
+blockProf.childNodes.forEach(e => {e.style.display = 'none'})
+blockProf.appendChild(userIcon)
+blockProf.classList.add('userProf')

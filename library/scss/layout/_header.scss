@@ -58,6 +58,24 @@
         .prof {
             cursor: pointer;
         }
+        .userProf {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: #FFF;
+
+            .styleUser_name {
+                color: #BB945F;
+                font-family: Inter;
+                font-size: 15px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 20px; /* 133.333% */
+            }
+        }
         .burger_menu {
             display: none;
         }

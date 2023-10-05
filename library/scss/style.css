@@ -406,6 +406,23 @@ body .section_title:hover {
 .header .header_container .prof {
   cursor: pointer;
 }
+.header .header_container .userProf {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #FFF;
+}
+.header .header_container .userProf .styleUser_name {
+  color: #BB945F;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 133.333% */
+}
 .header .header_container .burger_menu {
   display: none;
 }
@@ -1758,6 +1775,9 @@ body .section_title:hover {
   border: 1px solid #BB945F;
   margin-top: 10px;
 }
+.modal .modal_reg .modalReg_content .modalReg_form .input_error {
+  border: reda;
+}
 .modal .modal_reg .modalReg_content .modalReg_form #reg_btnSub {
   width: 75px;
   height: 30px;
@@ -1774,10 +1794,7 @@ body .section_title:hover {
   line-height: normal;
   letter-spacing: 1px;
   cursor: pointer;
-  margin-top: 20px;
-}
-.modal .modal_reg .modalReg_content .modal_regText {
-  margin: 10px, 0, 20px, 0;
+  margin-top: 10px;
 }
 .modal .modal_reg .modalReg_content .modal_regText .reg_text {
   color: #000;
