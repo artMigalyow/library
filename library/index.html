@@ -390,14 +390,31 @@
                 <div class="container">
                     <div class="find_card">
                         <h3 class="title_form">Find your Library card</h3>
-                        <div class="form">
+                        <form class="form">
                             <div class="form_body">
                                 <h4 class="name_form">Brooklyn Public Library</h4>
-                                <input class="libraryCard_input" type="text" placeholder="Reader's name ">
-                                <input class="libraryCard_input" type="number" placeholder="Card number">
+                                <input class="libraryCard_input" type="text" required placeholder="Reader's name ">
+                                <input class="libraryCard_input" type="text" min="9" max="9" required   placeholder="Card number">
                             </div>
-                            <button type="submit" class="form_btn">Check the card</button>
-                        </div>
+                            <div class="digLibCadPanel" id=#digLibCadPanel>
+                                <div class="digLibPanel_block">
+                                    <span class="visitss_panel">Visits</span>
+                                    <img src="./assets/svg/Union_panel.svg" alt="Union_panel">
+                                    <span class="visit_count">23</span>
+                                </div>
+                                <div class="digLibPanel_block">
+                                    <span class="bonuss_panel">Bonuses</span>
+                                    <img src="./assets/svg/Star 1_panel.svg" alt="Star">
+                                    <span class="bonus_count">1240</span>
+                                </div>
+                                <div class="digLibPanel_block">
+                                    <span class="books_panel">Books</span>
+                                    <img src="./assets/svg/book_panel.svg" alt="book">
+                                    <span class="books_count">2</span>
+                                </div>
+                            </div>
+                            <button  class="form_btn">Check the card</button>
+                        </form>
                     </div>
                     <div class="get">
                         <h3 class="get_title">Get a reader card</h3>

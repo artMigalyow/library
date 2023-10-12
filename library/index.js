@@ -331,55 +331,84 @@ inputPasword.forEach((el)=> {el.minLength = 8})
 const formReg = document.querySelector('.modalReg_form');
 const SING_UP_BTN = document.getElementById('reg_btnSub');
 
-// class UserNew{
-//     firstName;
-//     lastName;
-//     email;
-//     password;
-//     constructor (userFname,userLname, userEemail,userPswr){
-//         this.firstName = userFname;
-//         this.lastName = userLname;
-//         this.email = userEemail;
-//         this.password = userPswr;
-//     }
 
-// }
 function createUs(userFname,userLname, userEemail,userPswr){
     return {
         firstName : userFname,
         lastName : userLname,
         email : userEemail,
-        password : userPswr
+        password : userPswr,
+        isReg : '',
+        cardNumber :''
     }
 
 }
-const localUser = []
+const localUser = {}
+const blockProf = document.querySelector('.prof')
+let userIcon = document.createElement('span');
 
 formReg.addEventListener('submit', function() {
     let userNew = createUs(inputReg[0].value,inputReg[1].value,inputReg[2].value,inputReg[3].value);
-    localUser.push(userNew)
+    userNew.isReg = true
+    userNew.cardNumber = createdCardNum()
+    console.log(userNew.firstName)
+    userIcon.innerText = creatName(userNew)
+    blockProf.childNodes.forEach(e => {if (e === document.querySelector('img')){e.style.display = 'none'}})
+    userIcon.classList.add('styleUser_name')
+    blockProf.appendChild(userIcon)
+    blockProf.classList.add('userProf')
+    localStorage.setItem(creatLocalKey(userNew.email), JSON.stringify(userNew))
+    inputReg.forEach((elem) => {elem .value = ''})
+    winReg.style.display= 'none';
+    MODAL.style.display = 'none';
 
-    return localStorage.localUser = JSON.stringify(localUser);
+    return
 });
+// localStorage.clear()
 
-
-/*Иконка пользователя меняется на заглавные буквы имени.*/
-const users = JSON.parse(localStorage.localUser)
-const blockProf = document.querySelector('.prof')
-console.log(users[0].firstName[0]);
-const userIcon = document.createElement('span');
 function creatName(user){
     let name =[];
-    name.push(user.firstName[0])
-    name.push(user.lastName[0])
+    name.push(user.firstName[0].toUpperCase())
+    name.push(user.lastName[0].toUpperCase())
     return name.join('')
 
 }
-console.log(creatName(users[0]))
-console.log(userIcon)
-userIcon.innerHTML = creatName(users[0]);
-userIcon.classList.add('styleUser_name')
+function creatLocalKey(str){
+    return str.split('@')[0]
+}
+ //           Будет сгенерирован девятизначный Card Number случайным образом в формате 16-ричного числа.    //
+function createdCardNum(){   // сгенерирован девятизначный Card Number случайным образом в формате 16-ричного числа //
+    let num = [];
+    const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let randomIndex = Math.floor(Math.random() * alphabet.length)
+    num.push(alphabet[randomIndex].toUpperCase())
+    while( num.length !=  9){
+        num.push(Math.floor(Math.random()*10))
+    }
+    return num.join('');
+}
+                        //         При наличии регистрации, но будучи не авторизованным      / /
 
-blockProf.childNodes.forEach(e => {e.style.display = 'none'})
-blockProf.appendChild(userIcon)
-blockProf.classList.add('userProf')
+           // Блок Digital Library Cards. Если введённые имя и номер карты совпадают с данными пользователя, то отображается панель с информацией, вместо кнопки Check the card на 10 секунд. +2 //;
+
+const inputDigLibCard = document.querySelectorAll('.libraryCard_input');
+const subBtnLibCard = document.querySelector('.form_btn')
+const formDigCard = document.querySelector('.form')
+let countLS = localStorage.length;
+const panelDigCard = document.createElement('div')
+const myStorage = localStorage;
+const digLibPanel = document .querySelector('.digLibCadPanel')
+
+subBtnLibCard.addEventListener('click', (e)=>{
+    e.preventDefault()
+    for(let num=0; num!=countLS; num++){
+        console.log('dfdsfdgf')
+        if(inputDigLibCard[0].value  === JSON.parse(myStorage[myStorage.key(num)]).firstName){
+            if(inputDigLibCard[1].value === JSON.parse(myStorage[myStorage.key(num)]).cardNumber){
+                subBtnLibCard.classList.toggle('hidden_btnForm');
+                digLibPanel.classList.toggle('displayPanel')
+
+            }
+        }
+    }
+})
