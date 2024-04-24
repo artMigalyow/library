@@ -1,17 +1,414 @@
 console.log('Вёрстка валидная +10\nВёрстка семантическая +16\nВёрстка соответствует макету +54\nОбщие требования к верстке +20\n')
 
-
+const menuList = document.querySelector('.navigation');
 const burgerOpen = document.querySelector('.open_burger_menu');
-const burgerBtn = document.querySelector('.header_humb');
+const burgerBtn = document.querySelector('.burger_menu');
 const burgerClose = document.querySelector('.open_burger_open');
+const wrapSlider = document.querySelector('.caruselAbout');
+const PAGIN = document.querySelectorAll('.pagination');
+const CARUSPAGIN = document.querySelector('.carusel_pagination');
+const RADIO_BTN = document.querySelectorAll('.name_radiobtn');
+const ARROW_BTN = document.querySelectorAll(".arrow");
+const BLOCK_CARUSEL = document.querySelector('.about_carusel');
 
-burgerBtn.addEventListener('click',handleclick);
-function handleclick (event) {
-    console.log (burgerOpen.classList);
-    burgerOpen.classList.toggle('openbur');
+
+
+// Карусель в виде слайдера в блоке About с фиксированным началом и концом: На большом экране будет доступно 3 перехода. При нажатии на кнопку, происходит плавное замещение одной картинки другой (слепок. Переход из крайнего левого состояния в крайнее правое происходит только через перелистывание всех элементов посередине, и в обратную сторону. Тоже касается и ширины экранов для планшетов, только теперь кнопок будет 5. А в крайних положениях, стрелки соответствующей стороны будут становиться неактивными.
+
+// FOR TABLET media 768px
+
+
+
+
+burgerBtn.addEventListener('click', wihtClick);
+function wihtClick(even) {
+    burgerBtn.classList.toggle('burger_menu_click');
+
+    // menuList.classList.toggle('open__menu');
+    addStyle(menuList);
+    // visibleElem(menuList);
+    return even;
 }
-burgerClose.addEventListener('click', removeclick);
-function removeclick(event) {
-    burgerOpen.classList.toggle('openbur');
+function addStyle (element) {
+    element.style.opacity == 1 ? element.style.opacity = 0 : element.style.opacity = 1;
+    element.style.display == 'flex' ? element.style.display = 'none': element.style.display = 'flex';
+    return element;
 }
 
+
+
+// CARUSEL ABOUT
+
+
+CARUSPAGIN.addEventListener('click', clickPag);
+function clickPag(event) {
+    PAGIN.forEach((elem) => {elem.style.background = '#0C0C0E'})
+    event.target.style.background = '#BB945F';
+
+    if (tablet.matches) {
+        switch (event.target) {
+            case PAGIN[0] :
+                wrapSlider.style.left = '-982px';
+                wrapSlider.style.transition = '.5s ease-out cubic-bezier(1, 1, 1, 1)';
+                break;
+            case PAGIN[1] :
+                wrapSlider.style.left = '-1514px';
+                wrapSlider.style.transition = '.5s ease-out cubic-bezier(1, 1, 1, 1)';
+                break;
+            case PAGIN[2]:
+                wrapSlider.style.left = '-2046px';
+                wrapSlider.style.transition = '.5s ease-out cubic-bezier(1, 1, 1, 1)';
+                break;
+            case PAGIN[3]:
+                wrapSlider.style.left = '-2578px';
+                wrapSlider.style.transition = '.5s ease-out cubic-bezier(1, 1, 1, 1)';
+                break;
+            case PAGIN[4]:
+                wrapSlider.style.left = '-3110px';
+                wrapSlider.style.transition = '.5s ease-out cubic-bezier(1, 1, 1, 1)';
+                break;
+        }
+    }else if (event.target === PAGIN[1]) {
+        wrapSlider.style.left = '-1425px';
+        wrapSlider.style.transition = '.5s ease-out'
+    } else if (event.target === PAGIN[2]) {
+        wrapSlider.style.left = '-1900px';
+        wrapSlider.style.transition = '.5s ease-out';
+    }else if (event.target === PAGIN[0]) {
+        wrapSlider.style.left = '-950px';
+        wrapSlider.style.transition = '.5s ease-out'
+    }
+    return;
+}
+//ARROW CLICK
+
+let posSlide = window.getComputedStyle(wrapSlider);
+let countClick = 0;
+
+let posCard = ['-982px', '-1514px', '-2046px', '-2578px','-3110px'];
+let stackPosCard = ['-982px']
+
+BLOCK_CARUSEL.addEventListener('click', clickArrow);
+function clickArrow(event) {
+
+    if ( event.target === ARROW_BTN[0] ) {
+        if (posSlide.left === '-982px') {
+
+            ARROW_BTN[0].setAttribute('disabled', 'disabled');
+            ARROW_BTN[1].removeAttribute('disabled', 'disabled');
+
+        }else {
+
+            ARROW_BTN.forEach((elem) => {elem.removeAttribute('disabled')})
+
+            PAGIN.forEach((elem) => {elem.style.background = '#0C0C0E'});
+            PAGIN[--countClick].style.background = '#BB945F';
+            stackPosCard.pop(posCard[countClick])
+            wrapSlider.style.left = stackPosCard[stackPosCard.length-1]
+
+        }
+    }
+    if (event.target === ARROW_BTN[1]) {
+        if (posSlide.left === '-3110px'){
+            ARROW_BTN[1].setAttribute('disabled', 'disabled');
+
+
+        }else {
+
+            ARROW_BTN.forEach((elem) => {elem.removeAttribute('disabled')})
+            PAGIN.forEach((elem) => {elem.style.background = '#0C0C0E'});
+            PAGIN[++countClick].style.background = '#BB945F';
+
+            stackPosCard.push(posCard[countClick]);
+            wrapSlider.style.left = stackPosCard[stackPosCard.length-1];
+
+
+        }
+    }
+    return event;
+}
+
+
+// 'Слайдер" в виде затемнения/проявления (fade in / fade out) в блоке Favorites: все 4 карточки с книгами будут плавно затухать, а затем плавно появляться следующие. Анимация может быть прервана следующим нажатием на кнопку выбора поры года. Также допускается реализация данного пункта табами.
+//FAVORITES
+const INPUT_SEASON = document.querySelectorAll('.real_radiobtn');
+const BOOKS = document.querySelectorAll('.present_book');
+const FORM_BTN = document.querySelector('.favForms');
+const inptBtn = document.querySelectorAll('.real_radiobtn')
+
+const  winter = []
+const  spring = []
+const  summer = []
+const  autumn = []
+BOOKS.forEach ( function (elem,index){
+    if (index <=3) {
+        winter.push(elem)
+    } else if (index > 3 && index<=7) {
+        spring.push(elem)
+
+    } else if (index > 7 && index<=11) {
+        summer.push(elem)
+
+    }else if (index > 11 && index<=15) {
+        autumn.push(elem)
+    }
+})
+
+
+let bookStyle = document.querySelector('.present_book')
+INPUT_SEASON.forEach(input => input.addEventListener('change', (elem) => {
+    if (elem.target === INPUT_SEASON[0]){
+        BOOKS.forEach(elem => {
+            elem.style.animation = 'fadeOut 5s';
+            elem.style.display = 'none';
+
+        })
+        winter.forEach(elem => {
+            elem.style.animation = 'fadeIn 4s';
+            elem.style.display = 'flex';
+            elem.style.opacity = '1';
+            elem.style.visibility = 'visible';
+        })
+
+    }else if (elem.target===INPUT_SEASON[1]){
+        BOOKS.forEach(elem => {
+            elem.style.animation = 'fadeOut 5s';
+            elem.style.display = 'none';
+
+        })
+        spring.forEach(elem => {
+            elem.style.animation = 'fadeIn 4s';
+            elem.style.display = 'flex';
+            elem.style.opacity = '1';
+            elem.style.visibility = 'visible';
+        })
+    }else if (elem.target===INPUT_SEASON[2]){
+        BOOKS.forEach(elem => {
+            elem.style.animation = 'fadeOut 5s';
+            elem.style.display = 'none';
+
+        })
+        summer.forEach(elem => {
+            elem.style.animation = 'fadeIn 4s';
+            elem.style.display = 'flex';
+            elem.style.opacity = '1';
+            elem.style.visibility = 'visible';
+
+        })
+    }else if (elem.target===INPUT_SEASON[3]) {
+        BOOKS.forEach(elem => {
+            elem.style.animation = 'fadeOut 5s';
+            elem.style.display = 'none';
+
+        })
+        autumn.forEach(elem => {
+            console.log('yes')
+            elem.style.animation = 'fadeIn 4s';
+            elem.style.display = 'flex';
+            elem.style.opacity = '1';
+            elem.style.visibility = 'visible';
+        })
+    }
+}));
+
+
+                     // USER POSSITION TO REGISTER//
+
+const BTN_PROF = document.querySelector('.prof');
+const MODAL = document.querySelector('.modal');
+const dropProf = document.querySelector('.drop_menuProf');
+const spanDrop = dropProf.getElementsByTagName('span');
+const winReg = document.querySelector('.modal_reg');
+const winLog = document.querySelector('.modal_lg')
+const btnClsModal = document.querySelectorAll('.btn_close');
+const getBtn = document.querySelectorAll('.btn_get');
+const BODY = document.body;
+const clsHeader = document.querySelector('.header');
+
+
+// Digital Library Cards //
+getBtn.forEach(elem => elem.addEventListener('click', (event) => {
+    if (event.target === getBtn[0]) {
+        MODAL.children[0].style.display = 'none'
+        MODAL.style.display = 'flex';
+        winReg.style.display = 'flex';
+    }else if (event.target === getBtn[1]) {
+        MODAL.children[1].style.display = 'none'
+        MODAL.style.display = 'flex';
+        winLog.style.display = 'flex';
+    }
+}))
+
+
+
+BTN_PROF.addEventListener('click', (event) => {
+    burgerBtn.classList.remove('burger_menu_click');
+    // menuList.style.opacity = 0;
+    // menuList.style.display = 'none';
+    dropProf.classList.toggle('leaveDrop');
+
+})
+
+
+dropProf.addEventListener('click', (span) => {
+    if (span.target === spanDrop[2]) {
+        dropProf.classList.toggle('leaveDrop');
+        MODAL.style.display = 'flex';
+        winReg.style.display = 'flex';
+    } else if (span.target === spanDrop[1]) {
+        dropProf.classList.toggle('leaveDrop');
+        MODAL.style.display = 'flex';
+        winLog.style.display = 'flex';
+
+
+    }
+},true)
+
+//----------Этап 2: Пользователь на этапе регистрации----------//
+    //// ##Меню авторизации при нажатии на иконку пользователя//
+
+
+/// На разрешении 768px, при открытом бургер-меню, оно закрывается и открывается меню авторизации. +2////
+
+const tablet = window.matchMedia('(man-width: 1024px)');
+if (tablet.matches) {
+    btnClsModal.forEach(btnCls => btnCls.addEventListener('click', ClsModal));
+    function ClsModal(elem) {
+        return MODAL.style.display = 'none';
+    };
+    console.log('yes')
+    burgerBtn.addEventListener('click', elem => {
+        dropProf.classList.remove('leaveDrop');
+
+    });
+}
+/// ----Нажатие на любую область или элемент вне меню приводят к закрытию меню авторизации. +2---///
+BODY.addEventListener('click', (elem) => {
+    if(clsHeader.children[3].classList.contains('leaveDrop')) {
+        if ( elem.target !== dropProf) {
+            clsHeader.children[3].classList.toggle('leaveDrop')
+        }
+    }
+    const widthlog = elem.composedPath().includes(winLog);
+    const widthSing = elem.composedPath().includes(winReg);
+    if(!widthlog && !widthSing) {
+        MODAL.style.display = 'none';
+    }
+}, true)
+
+
+/*Модальное окно REGISTER*/
+
+  /* ***При нажатии на крестик в углу окна, или на затемнённую область вне этого окна, оно закрывается. +2****/
+
+btnClsModal.forEach(btnCls => btnCls.addEventListener('click', ClsModal));
+    function ClsModal(elem) {
+        return MODAL.style.display = 'none';
+    };
+    burgerBtn.addEventListener('click', elem => {
+        dropProf.classList.remove('leaveDrop');
+
+});
+/* *** В данном случае, ограничения по полям - все поля должны быть не пустыми. +2*/
+const inputReg = document.querySelectorAll('.regInput')
+const inputLog = document.querySelectorAll('.inputLog')
+
+function setAttribReq(elem,atrib){
+    elem.forEach((el)=>{
+        el.setAttribute(atrib,'')
+    })
+}
+setAttribReq(inputReg,"required");
+setAttribReq(inputLog,"required");
+
+/**Пароль должен быть не короче 8 символов. +2  */
+const inputPasword = document.querySelectorAll('input[type = password]');
+inputPasword.forEach((el)=> {el.minLength = 8})
+
+
+/*          ####Окончание регистрации    */
+/* Данные сохраняются в хранилище localStorage, в том числе и пароль, хотя в реальной жизни так делать нельзя. +2*/
+const formReg = document.querySelector('.modalReg_form');
+const SING_UP_BTN = document.getElementById('reg_btnSub');
+
+
+function createUs(userFname,userLname, userEemail,userPswr){
+    return {
+        firstName : userFname,
+        lastName : userLname,
+        email : userEemail,
+        password : userPswr,
+        isReg : '',
+        cardNumber :''
+    }
+
+}
+const localUser = {}
+const blockProf = document.querySelector('.prof')
+let userIcon = document.createElement('span');
+
+formReg.addEventListener('submit', function() {
+    let userNew = createUs(inputReg[0].value,inputReg[1].value,inputReg[2].value,inputReg[3].value);
+    userNew.isReg = true
+    userNew.cardNumber = createdCardNum()
+    console.log(userNew.firstName)
+    userIcon.innerText = creatName(userNew)
+    blockProf.childNodes.forEach(e => {if (e === document.querySelector('img')){e.style.display = 'none'}})
+    userIcon.classList.add('styleUser_name')
+    blockProf.appendChild(userIcon)
+    blockProf.classList.add('userProf')
+    localStorage.setItem(creatLocalKey(userNew.email), JSON.stringify(userNew))
+    inputReg.forEach((elem) => {elem .value = ''})
+    winReg.style.display= 'none';
+    MODAL.style.display = 'none';
+
+    return
+});
+// localStorage.clear()
+
+function creatName(user){
+    let name =[];
+    name.push(user.firstName[0].toUpperCase())
+    name.push(user.lastName[0].toUpperCase())
+    return name.join('')
+
+}
+function creatLocalKey(str){
+    return str.split('@')[0]
+}
+ //           Будет сгенерирован девятизначный Card Number случайным образом в формате 16-ричного числа.    //
+function createdCardNum(){   // сгенерирован девятизначный Card Number случайным образом в формате 16-ричного числа //
+    let num = [];
+    const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let randomIndex = Math.floor(Math.random() * alphabet.length)
+    num.push(alphabet[randomIndex].toUpperCase())
+    while( num.length !=  9){
+        num.push(Math.floor(Math.random()*10))
+    }
+    return num.join('');
+}
+                        //         При наличии регистрации, но будучи не авторизованным      / /
+
+           // Блок Digital Library Cards. Если введённые имя и номер карты совпадают с данными пользователя, то отображается панель с информацией, вместо кнопки Check the card на 10 секунд. +2 //;
+
+const inputDigLibCard = document.querySelectorAll('.libraryCard_input');
+const subBtnLibCard = document.querySelector('.form_btn')
+const formDigCard = document.querySelector('.form')
+let countLS = localStorage.length;
+const panelDigCard = document.createElement('div')
+const myStorage = localStorage;
+const digLibPanel = document .querySelector('.digLibCadPanel')
+
+subBtnLibCard.addEventListener('click', (e)=>{
+    e.preventDefault()
+    for(let num=0; num!=countLS; num++){
+        console.log('dfdsfdgf')
+        if(inputDigLibCard[0].value  === JSON.parse(myStorage[myStorage.key(num)]).firstName){
+            if(inputDigLibCard[1].value === JSON.parse(myStorage[myStorage.key(num)]).cardNumber){
+                subBtnLibCard.classList.toggle('hidden_btnForm');
+                digLibPanel.classList.toggle('displayPanel')
+
+            }
+        }
+    }
+})

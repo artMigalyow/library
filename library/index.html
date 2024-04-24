@@ -10,40 +10,31 @@
 </head>
 <body>
     <header class="header">
-        <div class="wrapper_header wrapper">
-            <a href="#" target="_blank"><h1 class="nameLib">Brooklyn Public Library</h1></a>
-            <div class="container ">
-                <nav class="navigation ">
-                    <ul class="nav_list ">
-                        <li class="list_section"><a class="name_listSection" href="#about">About</a></li>
-                        <li class="list_section"><a class="name_listSection" href="#favorites">Favorites</a></li>
-                        <li class="list_section"><a class="name_listSection" href="#coffeShop">Coffee shop</a></li>
-                        <li class="list_section"><a class="name_listSection" href="#contacts">Contacts</a></li>
-                        <li class="list_section"><a class="name_listSection" href="#libraryCard">Library Card</a></li>
-                    </ul>
-                </nav>
-                <a href="#" class="your_prof"><img src="./assets/svg/icon_profile.svg" alt="icon_prof" class="icon_prof"></a>
-                <div class="header_humb">
-                    <div class="humb_line"></div>
-                    <div class="humb_line"></div>
-                    <div class="humb_line"></div>
-                </div>
-            </div>
-            <div class="open_burger_menu">
-                <div class="open_bur_menu_header">
-                    <a href="#" class="open_burger_your_prof"><img src="./assets/svg/icon_profile.svg" alt="icon_prof" class="icon_prof"></a>
-                    <img class="open_burger_open" src="./assets/svg/burger-close.svg" alt="humb_close">
-                </div>
-                <nav class="open_bur_menu_nav">
-                    <ul class="open_bur_menu_nav_list">
-                        <li class="list_section"><a class="name_listSection" href="#about">About</a></li>
-                        <li class="list_section"><a class="name_listSection" href="#favorites">Favorites</a></li>
-                        <li class="list_section"><a class="name_listSection" href="#coffeShop">Coffee shop</a></li>
-                        <li class="list_section"><a class="name_listSection" href="#contacts">Contacts</a></li>
-                        <li class="list_section"><a class="name_listSection" href="#libraryCard">Library Card</a></li>
-                    </ul>
-                </nav>
-            </div>
+        <h1 class="header_title">Brooklyn Public Library</h1>
+        <nav class="navigation">
+            <ul class="nav_list">
+                <li class="list"><a class="list_link" href="#about">About</a></li>
+                <li class="list"><a class="list_link" href="#favorites">Favorites</a></li>
+                <li class="list"><a class="list_link" href="#coffeShop">Coffee shop</a></li>
+                <li class="list"><a class="list_link" href="#contacts">Contacts</a></li>
+                <li class="list"><a class="list_link" href="#libraryCard">Library Card</a></li>
+            </ul>
+        </nav>
+        <div class="header_container">
+            <div class="prof"><img src="./assets/svg/icon_profile.svg" alt="icon_profile"></div>
+            <button class="burger_menu">
+                <span class="burger_line"></span>
+            </button>
+        </div>
+        <div class="drop_menuProf">
+            <span class="prof">Profile</span>
+            <span class="lg">Log In</span>
+            <span class="rg">Register</span>
+        </div>
+        <div class="drop_menuProfAuth">
+            <span class="prof">Profile</span>
+            <span class="mProf">My profile</span>
+            <span class="lg_out">Log Out</span>
         </div>
     </header>
     <main class="main">
@@ -63,12 +54,17 @@
                     <p class="about_text">The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop inside </p>
                 </div>
                 <div class="about_carusel">
-                    <button class="arrow"><img src="./assets/svg/Arrow left2.png" class="arr_left" alt="arrow_left"></button>
-                    <img src="./assets/jpeg/about_image1.jpg" alt="about_img1" id="about_carusel_img1" class="about_img1">
-                    <img src="./assets/jpeg/about_image2.jpg" alt="about_img2" id="about_carusel_img2" class="about_img1">
-                    <img src="./assets/jpeg/about_image3.jpg" alt="about_img3" id="about_carusel_img3" class="about_img1">
-                    <button class="arrow"><img src="./assets/svg/Arrow right.svg" class="arr_right" alt="arrow_right"></button>
-
+                    <button class="arrow arr_left" alt = 'arr_left' ></button>
+                    <div class="caruselAbout">
+                        <div class="slideImage__block"><img src="./assets/jpeg/about_image 5.jpg" alt="about_image5"></div>
+                        <div class="slideImage__block"><img src="./assets/jpeg/about_image 4.jpg" alt="about_image4"></div>
+                        <div class="slideImage__block"><img src="./assets/jpeg/about_image1.jpg" alt="about_image1"></div>
+                        <div class="slideImage__block"><img src="./assets/jpeg/about_image2.jpg" alt="about_image2"></div>
+                        <div class="slideImage__block"><img src="./assets/jpeg/about_image3.jpg" alt="about_image3"></div>
+                        <div class="slideImage__block"><img src="./assets/jpeg/about_image 4.jpg" alt="about_image4"></div>
+                        <div class="slideImage__block"><img src="./assets/jpeg/about_image 5.jpg" alt="about_image5"></div>
+                    </div>
+                    <button class="arrow arr_right" alt = 'arr_right'></button>
                 </div>
                 <div class="carusel_pagination">
                     <button class="pagination"></button>
@@ -150,7 +146,7 @@
                                 <h4 class="autor">By Clive Irving</h4>
                             </div>
                             <p class="description">A timely and revelatory new biography of Queen Elizabeth (and her family) exploring how the Windsors have evolved and thrived as the modern world has changed around them.</p>
-                            <button disabled class="own_book">Own</button>
+                            <button disabled class="buy_book">Buy</button>
                         </div>
                         <img src="./assets/jpeg/book4.jpg" alt="book4" class="book">
                     </div>
@@ -198,7 +194,7 @@
                                 <h4 class="autor">By Alexandra Chang</h4>
                             </div>
                             <p class="description">A fascinating story of a teenage girl who marries a man twice her age with the promise to bring her to America. Her marriage is an opportunity for her family to eventually immigrate. For fans of Isabel Allende and Julia Alvarez.</p>
-                            <button disabled class="own_book">Own</button>
+                            <button disabled class="buy_book">Buy</button>
                         </div>
                         <img src="./assets/jpeg/book8.jpg" alt="book8" class="book">
                     </div>
@@ -249,6 +245,54 @@
                             <button class="buy_book">Buy</button>
                         </div>
                         <img src="./assets/jpeg/book12.jpg" alt="book12" class="book">
+                    </div>
+                    <div class="present_book" id="book13">
+                        <div class="bg-description">
+                            <h5 class="staff_picks">Staff Picks</h5>
+                            <div class="name_book">
+                                <h3 class="book_title">Casual Conversation</h3>
+                                <h4 class="autor">By Renia White</h4>
+                            </div>
+                            <p class="description">White's impressive debut collection takes readers through and beyond the concepts of conversation and the casual - both what we say to each other and what we don't, examining the possibilities around how we construct and communicate identity. </p>
+                            <button class="buy_book">Buy</button>
+                        </div>
+                        <img src="./assets/jpeg/book13.jpg" alt="book13" class="book">
+                    </div>
+                    <div class="present_book" id="book14">
+                        <div class="bg-description">
+                            <h5 class="staff_picks">Staff Picks</h5>
+                            <div class="name_book">
+                                <h3 class="book_title">The Great Fire</h3>
+                                <h4 class="autor">By Lou Ureneck</h4>
+                            </div>
+                            <p class="description">The harrowing story of an ordinary American and a principled Naval officer who, horrified by the burning of Smyrna, led an extraordinary rescue effort that saved a quarter of a million refugees from the Armenian Genocide</p>
+                            <button class="buy_book">Buy</button>
+                        </div>
+                        <img src="./assets/jpeg/book14.jpg" alt="book14" class="book">
+                    </div>
+                    <div class="present_book" id="book15">
+                        <div class="bg-description">
+                            <h5 class="staff_picks">Staff Picks</h5>
+                            <div class="name_book">
+                                <h3 class="book_title">Rickey: The Life and Legend</h3>
+                                <h4 class="autor">By Howard Bryant</h4>
+                            </div>
+                            <p class="description">With the fall rolling around, one can't help but think of baseball's postseason coming up! And what better way to prepare for it than reading the biography of one of the game's all-time greatest performers, the Man of Steal, Rickey Henderson?</p>
+                            <button class="buy_book">Buy</button>
+                        </div>
+                        <img src="./assets/jpeg/book15.jpg" alt="book15" class="book">
+                    </div>
+                    <div class="present_book" id="book16">
+                        <div class="bg-description">
+                            <h5 class="staff_picks">Staff Picks</h5>
+                            <div class="name_book">
+                                <h3 class="book_title">Slug: And Other Stories</h3>
+                                <h4 class="autor">By Megan Milks</h4>
+                            </div>
+                            <p class="description">Exes Tegan and Sara find themselves chained together by hairballs of codependency. A father and child experience the shared trauma of giving birth to gods from their wounds.</p>
+                            <button class="buy_book">Buy</button>
+                        </div>
+                        <img src="./assets/jpeg/book16.jpg" alt="book16" class="book">
                     </div>
                 </div>
             </div>
@@ -346,14 +390,31 @@
                 <div class="container">
                     <div class="find_card">
                         <h3 class="title_form">Find your Library card</h3>
-                        <div class="form">
+                        <form class="form">
                             <div class="form_body">
                                 <h4 class="name_form">Brooklyn Public Library</h4>
-                                <input class="libraryCard_input" type="text" placeholder="Reader's name ">
-                                <input class="libraryCard_input" type="number" placeholder="Card number">
+                                <input class="libraryCard_input" type="text" required placeholder="Reader's name ">
+                                <input class="libraryCard_input" type="text" min="9" max="9" required   placeholder="Card number">
                             </div>
-                            <button type="submit" class="form_btn">Check the card</button>
-                        </div>
+                            <div class="digLibCadPanel" id=#digLibCadPanel>
+                                <div class="digLibPanel_block">
+                                    <span class="visitss_panel">Visits</span>
+                                    <img src="./assets/svg/Union_panel.svg" alt="Union_panel">
+                                    <span class="visit_count">23</span>
+                                </div>
+                                <div class="digLibPanel_block">
+                                    <span class="bonuss_panel">Bonuses</span>
+                                    <img src="./assets/svg/Star 1_panel.svg" alt="Star">
+                                    <span class="bonus_count">1240</span>
+                                </div>
+                                <div class="digLibPanel_block">
+                                    <span class="books_panel">Books</span>
+                                    <img src="./assets/svg/book_panel.svg" alt="book">
+                                    <span class="books_count">2</span>
+                                </div>
+                            </div>
+                            <button  class="form_btn">Check the card</button>
+                        </form>
                     </div>
                     <div class="get">
                         <h3 class="get_title">Get a reader card</h3>
@@ -392,6 +453,62 @@
             </div>
         </div>
     </footer>
+    <div class="modal">
+        <dialog class="modal_lg">
+            <img src="./assets/svg/close_btn.svg" alt="btnClose" class="btn_close">
+            <div class="modalLg__content">
+                <span class="modal_title">Login</span>
+                <form action="#" method="dialog" class="modal_lgForm">
+                    <div class="formLg_mail">
+                        <label for="email">E-mail or readers card</label>
+                        <input type="email" name="email" class="inputLog" id="inpLg_email">
+                    </div>
+                    <div class="formLg_psw">
+                        <label for="psw_lg">Password</label>
+                        <input type="password"  name="psw_lg" class="inputLog" id="inpLg_psw">
+                    </div>
+                    <div class="formLg_btnSub">
+                        <button type="submit" value="Log In" id="lg_btnSub">Log In</button>
+                    </div>
+                </form>
+                <div class="modal_lgText">
+                    <span class="lgText">Don’t have an account?</span>
+                    <a href="#"class='reg_link'>Register</a>
+                </div>
+            </div>
+        </dialog>
+        <dialog class="modal_reg">
+            <img src="./assets/svg/close_btn.svg" alt="btnClose" class="btn_close">
+            <div class="modalReg_content">
+                <span class="modal_title">Register</span>
+                <form action="#" method="dialog" class="modalReg_form">
+                    <div class="formReg_fn">
+                        <label for="reg_fn">First name</label>
+                        <input type="text" name="reg_fn" class="regInput" id="inpReg_fn">
+                    </div>
+                    <div class="formReg_ln">
+                        <label for="reg_ln">Last name</label>
+                        <input type="text" name="reg_ln" class="regInput" id="inpReg_ln">
+                    </div>
+                    <div class="formReg_mail">
+                        <label for="reg_mail">E-mail</label>
+                        <input type="email" name="reg_mail" class="regInput" id="inpReg_mail">
+                    </div>
+                    <div class="formReg_psw">
+                        <label for="reg_psw">Password</label>
+                        <input type="password" name="reg_psw" class="regInput" id="inpReg_psw">
+                    </div>
+                    <div class="formReg_btnSub">
+                        <input type="submit" value="Sing Up"  id="reg_btnSub">
+                    </div>
+                </form>
+                <div class="modal_regText">
+                    <span class="reg_text">Already have an account?</span>
+                    <a href="" class="login_link">Login</a>
+                </div>
+            </div>
+        </dialog>
+    </div>
     <script src="./index.js"></script>
 </body>
 </html>

@@ -49,13 +49,44 @@
             display: flex;
             flex-direction: row;
             justify-content: space-between;
+            position: relative;
+            height: 560px;
+            overflow: hidden;
             .arrow {
                 display: none;
             }
-            .about_img1 {
-                width: 100%;
-                max-width: 450px;
+            .caruselAbout {
+                position: absolute;
+                left: -950px;
+                // max-width: 1400px;
+                height: inherit;
+                // background: gray;
+                display: flex;
+                flex-direction: row;
+                gap: 25px;
+
+                .slideImage__block {
+                    width: inherit;
+                    height: inherit;
+
+                }
             }
+            .moveLeftOneCard {
+                left: -1425px;
+                transition: .5s ease-out;
+
+            }
+            .moveLeftTwoCard {
+                left: -1900px;
+                transition: .5s ease-out;
+
+            }
+            .about_slideLeft {
+                left: 0px; // +475px
+
+                transition: .5s ease-out;
+            }
+            
         }
         .carusel_pagination {
             max-width: 68px;
@@ -72,11 +103,6 @@
                 border: none;
                 transition: 0.8s;
                 position: relative;
-
-            }
-            .pagination:hover {
-                background: #BB945F;
-                border: none;
             }
             .pagination::after{
                 content: '';
@@ -105,18 +131,30 @@
                 }
             }
             .about_carusel{
-                max-width: 568px;
+                max-width: 614px;
                 align-items: center;
                 .arrow {
                     display: inline;
-                    background: #FFF;
                     border: none;
-                    width: 28px;
-                    height: 23px
+                    width: 24px;
+                    height: 24px;
+                    padding: 0;
+                    background-color: #FFF;
                 }
-                #about_carusel_img2, #about_carusel_img3 {
-                    display: none;
+                .arr_left {
+                    background-image: url('/assets/svg/Arrow_Left.svg');
                 }
+                .arr_right {
+                    background-image: url('/assets/svg/Arrow\ right.svg');
+                }
+                .caruselAbout {
+                    width: 450px;
+                    height: 560px;
+                    left: -982px;
+                    gap: 82px   ;
+                    transition-duration: 1s;
+                }
+
             }
             .carusel_pagination {
                 max-width: 120px;
